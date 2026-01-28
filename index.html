@@ -8,9 +8,9 @@
         body { font-family: sans-serif; background: #0f172a; color: white; text-align: center; padding: 50px 20px; }
         .box { background: #1e293b; padding: 30px; border-radius: 20px; max-width: 400px; margin: auto; border: 1px solid #334155; }
         input { width: 90%; padding: 10px; margin: 10px 0; border-radius: 8px; border: none; font-size: 18px; }
-        button { background: #3b82f6; color: white; border: none; padding: 15px; border-radius: 10px; width: 100%; cursor: pointer; font-weight: bold; }
+        button { background: #3b82f6; color: white; border: none; padding: 15px; border-radius: 10px; width: 100%; cursor: pointer; font-weight: bold; margin-top: 10px; }
         .res { font-size: 30px; color: #10b981; margin: 20px; font-weight: bold; }
-        .link { display: block; background: linear-gradient(45deg, #f59e0b, #ef4444); color: white; padding: 15px; border-radius: 10px; text-decoration: none; font-weight: bold; }
+        .link { display: block; background: linear-gradient(45deg, #f59e0b, #ef4444); color: white; padding: 15px; border-radius: 10px; text-decoration: none; font-weight: bold; margin-top: 20px; }
     </style>
 </head>
 <body>
@@ -20,13 +20,15 @@
         <input type="number" id="d" placeholder="Discount %">
         <button onclick="c()">Calculate</button>
         <div class="res" id="r">/data/data/com.termux/files/usr/bin/bash.00</div>
-        <a href="ضع_رابطك_هنا" class="link">🎁 Get Global Coupons Now!</a>
+        <a href="رابطك_الربحي_العالمي_هنا" class="link">🎁 Get Global Coupons Now!</a>
     </div>
     <script>
         function c() {
             let p = document.getElementById('p').value;
             let d = document.getElementById('d').value;
-            document.getElementById('r').innerText = "$" + (p - (p * d / 100)).toFixed(2);
+            if(p && d) {
+                document.getElementById('r').innerText = "$" + (p - (p * d / 100)).toFixed(2);
+            }
         }
     </script>
 </body>
