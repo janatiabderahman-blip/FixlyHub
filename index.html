@@ -2,22 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Global Calc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Discount Calculator</title>
     <style>
-        body { background: #0f172a; color: white; text-align: center; font-family: sans-serif; padding-top: 50px; }
-        .box { background: #1e293b; padding: 20px; border-radius: 15px; display: inline-block; border: 1px solid #334155; }
-        input { margin: 10px; padding: 10px; border-radius: 5px; border: none; }
-        .btn { background: #3b82f6; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: block; margin-top: 10px; font-weight: bold; }
+        body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: white; text-align: center; padding: 20px; }
+        .card { background: #1e293b; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); max-width: 400px; margin: auto; border: 1px solid #334155; }
+        input { width: 90%; padding: 12px; margin: 10px 0; border-radius: 10px; border: none; font-size: 18px; outline: none; }
+        button { background: #3b82f6; color: white; border: none; padding: 15px; border-radius: 10px; cursor: pointer; font-weight: bold; width: 100%; margin: 10px 0; font-size: 18px; }
+        .result { font-size: 32px; color: #10b981; font-weight: bold; margin: 20px; }
+        .btn-profit { display: block; background: linear-gradient(45deg, #f59e0b, #ef4444); color: white; padding: 15px; border-radius: 15px; text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h2>Discount Calculator</h2>
-        <input type="number" id="p" placeholder="Price $">
+    <div class="card">
+        <h2>💰 Discount Calculator</h2>
+        <input type="number" id="p" placeholder="Original Price ($)">
         <input type="number" id="d" placeholder="Discount %">
-        <h1 id="r">/data/data/com.termux/files/usr/bin/bash.00</h1>
-        <button onclick="document.getElementById('r').innerText='$' + (document.getElementById('p').value * (1 - document.getElementById('d').value/100)).toFixed(2)">Calculate</button>
-        <a href="https://shrinkme.io/your_link" class="btn">Get Coupons</a>
+        <button onclick="c()">Calculate Now</button>
+        <div class="result" id="r">/data/data/com.termux/files/usr/bin/bash.00</div>
+        <a href="https://shrinkme.io/your_link" class="btn-profit">🎁 Get Best Global Coupons!</a>
     </div>
+    <script>
+        function c() {
+            let p = document.getElementById('p').value;
+            let d = document.getElementById('d').value;
+            if(p && d) {
+                let val = p - (p * d / 100);
+                document.getElementById('r').innerText = "$" + val.toFixed(2);
+            }
+        }
+    </script>
 </body>
 </html>
