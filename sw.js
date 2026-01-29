@@ -1,14 +1,6 @@
 self.addEventListener('install', (e) => {
- e.waitUntil(
-   caches.open('pro-deals-v1').then((cache) => cache.addAll([
-     'index.html',
-     'manifest.json'
-   ]))
- );
+  e.waitUntil(caches.open('pda-v1').then((c) => c.addAll(['index.html', 'manifest.json'])));
 });
-
 self.addEventListener('fetch', (e) => {
- e.respondWith(
-   caches.match(e.request).then((response) => response || fetch(e.request))
- );
+  e.respondWith(caches.match(e.request).then((r) => r || fetch(e.request)));
 });
