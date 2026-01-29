@@ -2,91 +2,105 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="manifest" href="manifest.json">
-    <title>PRO DEALS AI | محرك الصفقات الذكي</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Deals AI | مساعدك الذكي للتسوق الآمن</title>
     
     <script async src="https://pl28602600.effectivegatecpm.com/ea/11/8e/ea118ebfb63558281df1adbb61290596.js"></script>
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
-        :root { --neon-gold: #ff9900; --deep-black: #020205; }
-        body { font-family: 'Cairo', sans-serif; background: var(--deep-black); color: white; overflow-x: hidden; }
-        
-        /* تصميم الزجاج المتطور */
-        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 153, 0, 0.1); border-radius: 2.5rem; transition: 0.4s; }
-        .glass-card:hover { border-color: var(--neon-gold); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(255, 153, 0, 0.15); }
-        
-        /* زر الأرباح المتوهج */
-        .btn-gold { background: linear-gradient(45deg, #ff9900, #ffcc00); color: black; font-weight: 900; transition: 0.3s; position: relative; overflow: hidden; }
-        .btn-gold:active { transform: scale(0.96); }
-        
-        /* مؤشر التحديث المباشر */
-        .live-indicator { display: inline-flex; items-center; gap: 8px; background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.2); padding: 4px 12px; rounded-full: 9999px; }
-        .dot { height: 8px; width: 8px; background: #22c55e; border-radius: 50%; animation: pulse 1.5s infinite; }
-        @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.5); opacity: 0.5; } 100% { transform: scale(1); opacity: 1; } }
+        body { font-family: 'Cairo', 'Inter', sans-serif; scroll-behavior: smooth; }
+        .safe-badge { background: #ecfdf5; color: #059669; border: 1px solid #10b981; }
+        .hero-pattern { background-color: #f8fafc; background-image: radial-gradient(#cbd5e1 0.5px, transparent 0.5px); background-size: 24px 24px; }
     </style>
 </head>
-<body class="p-6">
-    <div class="max-w-md mx-auto space-y-10">
-        
-        <div class="text-center space-y-4">
-            <div class="w-20 h-20 bg-gradient-to-tr from-[#ff9900] to-[#ffcc00] rounded-3xl flex items-center justify-center mx-auto shadow-[0_0_50px_rgba(255,153,0,0.3)]">
-                <span class="text-4xl font-black text-black">PD</span>
+<body class="bg-white text-slate-800">
+
+    <nav class="bg-white/80 backdrop-blur-md border-b sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-2xl font-black text-slate-900 tracking-tighter">PRO DEALS <span class="text-blue-600">AI</span></span>
+            <div class="flex items-center gap-4">
+                <span class="safe-badge text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">اتصال آمن SSL</span>
             </div>
-            <div class="space-y-1">
-                <h1 class="text-4xl font-black tracking-tighter italic text-white">PRO DEALS <span class="text-[#ff9900]">AI</span></h1>
-                <div class="live-indicator">
-                    <span class="dot"></span>
-                    <span class="text-[10px] text-green-500 font-bold uppercase tracking-widest">النظام محدث الآن | 2026</span>
+        </div>
+    </nav>
+
+    <header class="hero-pattern py-20 px-6 border-b">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <h1 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight">تسوق بذكاء، ووفر وقتك وأموالك في السعودية</h1>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">نقوم بتحليل آلاف العروض يومياً باستخدام تقنياتنا الذكية لنقدم لك فقط الصفقات الحقيقية والموثوقة من المتاجر الكبرى.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#explore" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl font-bold transition shadow-xl">اكتشف العروض المتاحة</a>
+                <a href="#how" class="bg-white border text-slate-600 px-10 py-4 rounded-xl font-bold hover:bg-slate-50 transition">كيف نعمل؟</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="how" class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="space-y-4">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xl">1</div>
+                <h3 class="font-bold text-xl text-slate-900">تحليل الأسعار</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">نتأكد من أن الخصم حقيقي عبر مقارنة الأسعار التاريخية للمنتج، لضمان عدم تعرضك لخصومات وهمية.</p>
+            </div>
+            <div class="space-y-4">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xl">2</div>
+                <h3 class="font-bold text-xl text-slate-900">روابط رسمية فقط</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">جميع الأزرار توجهك مباشرة للمتاجر الرسمية (أمازون، تيمو) لضمان حماية بياناتك البنكية وعملية الدفع.</p>
+            </div>
+            <div class="space-y-4">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xl">3</div>
+                <h3 class="font-bold text-xl text-slate-900">تحديث فوري</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">نظامنا يعمل على مدار الساعة لتحديث الروابط والخصومات فور صدورها، مما يوفر عليك عناء البحث اليدوي.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="explore" class="bg-slate-50 py-24 px-6">
+        <div class="max-w-4xl mx-auto space-y-8">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl font-black text-slate-900">صفقات تم التحقق منها اليوم</h2>
+                <p class="text-slate-500">سيتم توجيهك للموقع الرسمي لإتمام عملية الشراء بأمان</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-6 hover:shadow-md transition">
+                <div class="space-y-2 text-center md:text-right">
+                    <h3 class="text-2xl font-bold">أمازون السعودية - الأكثر مبيعاً</h3>
+                    <p class="text-slate-500 text-sm italic italic">الإلكترونيات، المنزل، ومستلزمات العناية</p>
+                </div>
+                <a href="https://www.amazon.sa/gp/bestsellers/?tag=abdo20260ea-21" class="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition w-full md:w-auto text-center">انتقل لأمازون</a>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-6 hover:shadow-md transition">
+                <div class="space-y-2 text-center md:text-right">
+                    <h3 class="text-2xl font-bold text-orange-600">عروض متجر تيمو (Temu)</h3>
+                    <p class="text-slate-500 text-sm">هدية ترحيبية للمستخدمين الجدد حتى 400 ريال سعودي</p>
+                </div>
+                <a href="https://temu.to/k/ehsqckgdgv7" class="bg-orange-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-orange-700 transition w-full md:w-auto text-center">اكتشف العروض</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white py-20 px-6 border-t">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-4">
+                <h4 class="font-bold text-slate-900">عن Pro Deals AI</h4>
+                <p class="text-sm text-slate-500 leading-relaxed">نحن منصة مستقلة تهدف لتعزيز الشفافية في التسوق الرقمي. نعتمد في نموذج عملنا على التسويق بالعمولة، مما يعني أننا قد نحصل على نسبة بسيطة عند شرائك عبر روابطنا دون أي تكلفة إضافية عليك.</p>
+            </div>
+            <div class="text-sm text-slate-500 space-y-4">
+                <p>للأسئلة والاستفسارات: <span class="text-slate-900 font-bold">contact@prodealsai.com</span></p>
+                <div class="flex gap-6">
+                    <a href="#" class="underline">سياسة الخصوصية</a>
+                    <a href="#" class="underline">شروط الخدمة</a>
                 </div>
             </div>
         </div>
-
-        <div class="glass-card p-8 space-y-6 relative overflow-hidden">
-            <div class="flex justify-between items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" class="h-6 brightness-200" alt="Amazon">
-                <span class="text-[10px] bg-orange-600 text-white px-3 py-1 rounded-lg font-black uppercase">عرض اليوم</span>
-            </div>
-            <div class="space-y-2">
-                <h2 class="text-2xl font-black italic">أقوى صفقات أمازون السعودية</h2>
-                <p class="text-sm text-gray-400">تخفيضات تصل إلى 70% على الإلكترونيات والموضة مختارة بالذكاء الاصطناعي.</p>
-            </div>
-            <a href="https://www.amazon.sa/gp/bestsellers/?tag=abdo20260ea-21" class="btn-gold block w-full text-center py-5 rounded-2xl text-sm uppercase tracking-widest shadow-lg">تصفح الصفقات الآن</a>
+        <div class="text-center mt-16 text-[10px] text-slate-400 uppercase tracking-widest">
+            © 2026 PRO DEALS AI - جميع الحقوق محفوظة
         </div>
+    </footer>
 
-        <div class="glass-card p-8 space-y-6 border-r-4 border-r-red-500">
-            <div class="flex justify-between items-center">
-                <h2 class="text-3xl font-black italic tracking-tighter">TEMU</h2>
-                <span class="text-[10px] bg-red-600 text-white px-3 py-1 rounded-lg font-black">كوبون حصري</span>
-            </div>
-            <div class="bg-red-500/10 border border-red-500/20 p-5 rounded-2xl">
-                <p class="text-[10px] text-red-500 font-black mb-1 uppercase tracking-widest">هدية المستخدم الجديد</p>
-                <p class="text-2xl font-black">حزمة بقيمة <span class="text-red-500 underline">400 ريال</span> مجاناً</p>
-            </div>
-            <a href="https://temu.to/k/ehsqckgdgv7" class="btn-gold block w-full text-center py-5 rounded-2xl text-sm uppercase tracking-widest">احصل على الهدية</a>
-        </div>
-
-        <div class="text-center space-y-6 opacity-40">
-            <div class="flex justify-center items-center gap-8 grayscale brightness-200">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" class="h-3">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" class="h-5">
-            </div>
-            <p class="text-[8px] font-black uppercase tracking-[0.4em]">Partner ID: abdo20260ea-21</p>
-            <button onclick="togglePrivacy()" class="text-[8px] underline">شروط الاستخدام والخصوصية</button>
-        </div>
-    </div>
-
-    <div id="privacyModal" class="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-8 hidden">
-        <div class="glass-card p-10 text-center max-w-xs border border-white/10">
-            <h3 class="text-orange-500 font-black mb-4 uppercase">إخلاء مسؤولية</h3>
-            <p class="text-[10px] text-gray-400 italic leading-relaxed">بصفتنا شركاء لأمازون، قد نربح عمولة من المشتريات المؤهلة. الموقع مؤمن ببروتوكولات التشفير العالمية.</p>
-            <button onclick="togglePrivacy()" class="mt-8 w-full py-4 bg-white text-black font-black text-xs rounded-2xl uppercase">إغلاق</button>
-        </div>
-    </div>
-
-    <script>function togglePrivacy() { document.getElementById('privacyModal').classList.toggle('hidden'); }</script>
 </body>
 </html>
