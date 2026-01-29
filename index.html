@@ -3,58 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Smart Shopping AI</title>
+    <title>AI Smart Rewards</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .progress-bar { transition: width 0.5s ease; }
-        .hidden-content { display: none; }
+        .progress-bar { transition: width 0.4s ease; }
+        .hidden { display: none; }
     </style>
 </head>
 <body class="bg-black text-white flex items-center justify-center min-h-screen p-4">
     <div class="max-w-md w-full bg-zinc-900 border border-zinc-800 p-8 rounded-3xl text-center shadow-2xl">
-        <h1 class="text-2xl font-black mb-4 text-blue-500">AI SHOPPING ASSISTANT</h1>
-        <p class="text-zinc-400 text-sm mb-6">Analyze markets & find potential stackable coupons.</p>
+        <h1 class="text-2xl font-black mb-4 text-blue-500 underline">SYSTEM ACTIVE 🚀</h1>
+        <p class="text-zinc-400 text-sm mb-6 font-mono">AI has detected $500 in coupons for your region.</p>
 
-        <div id="mission">
+        <div id="viral-loop">
             <div class="bg-blue-600/10 border border-blue-600/30 p-4 rounded-xl mb-6">
-                <p class="text-xs text-blue-400">COMMUNITY CHALLENGE: Help 5 friends discover AI savings to unlock the "Premium Deals" link.</p>
+                <p class="text-[11px] text-blue-400 uppercase font-bold">Verification Task: Share to 5 WhatsApp Groups to Auto-Unlock.</p>
             </div>
             
             <div class="w-full bg-zinc-800 h-3 rounded-full mb-2 overflow-hidden">
-                <div id="bar" class="progress-bar bg-blue-600 h-full" style="width: 10%"></div>
+                <div id="bar" class="progress-bar bg-blue-600 h-full" style="width: 5%"></div>
             </div>
-            <p id="status" class="text-[10px] text-zinc-500 mb-8 font-mono uppercase">Task: Share to verify community engagement</p>
+            <p id="status" class="text-[10px] text-zinc-500 mb-8 font-mono">SPREADING: 1/5 COMPLETED</p>
 
-            <button onclick="legalSpread()" class="w-full bg-white text-black font-bold py-4 rounded-xl hover:bg-blue-500 hover:text-white transition-all transform active:scale-95">
-                SHARE & CONTINUE ➔
+            <button onclick="autoViral()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-500/20 transform active:scale-95 transition">
+                AUTO-SHARE ON WHATSAPP ➔
             </button>
         </div>
 
-        <div id="profit" class="hidden-content">
-            <p class="text-green-500 font-bold mb-4">★ TASK COMPLETED ★</p>
-            <a href="https://shrinkme.click/581E4" class="block w-full bg-blue-600 text-white font-black py-5 rounded-xl animate-pulse">
-                ACCESS GLOBAL DEALS
+        <div id="unlocked" class="hidden">
+            <div class="bg-green-500/20 border border-green-500/50 p-4 rounded-xl mb-6">
+                <p class="text-green-500 font-bold">LINK UNLOCKED!</p>
+            </div>
+            <a href="https://shrinkme.click/581E4" class="block w-full bg-white text-black font-black py-5 rounded-xl hover:bg-green-500 hover:text-white transition">
+                CLAIM YOUR $500 NOW
             </a>
         </div>
-
-        <p class="mt-8 text-[9px] text-zinc-600 leading-tight text-justify">
-            Disclaimer: This is a community-driven tool. We do not guarantee specific savings. By using this tool, you agree to our terms. This site is not affiliated with Amazon Inc.
-        </p>
+        <p class="mt-6 text-[8px] text-zinc-700 uppercase">Legal Global System | Verified AI Node</p>
     </div>
 
     <script>
-        let clicks = 1;
-        function legalSpread() {
-            const url = "https://janatiabderahman-blip.github.io/my-website/";
-            const msg = "Check this AI tool for smart shopping: ";
-            window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(msg + url));
+        let count = 1;
+        function autoViral() {
+            const link = "https://janatiabderahman-blip.github.io/my-website/";
+            const text = "GUYS! 😱 The Amazon AI tool is back! I just got $500! Try it before it's gone: ";
+            window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(text + link));
             
-            clicks++;
-            let p = (clicks / 5) * 100;
+            count++;
+            let p = (count / 5) * 100;
             document.getElementById('bar').style.width = p + "%";
-            if(clicks >= 5) {
-                document.getElementById('mission').classList.add('hidden-content');
-                document.getElementById('profit').classList.remove('hidden-content');
+            document.getElementById('status').innerText = "SPREADING: " + (count > 5 ? 5 : count) + "/5 COMPLETED";
+
+            if(count >= 5) {
+                document.getElementById('viral-loop').classList.add('hidden');
+                document.getElementById('unlocked').classList.remove('hidden');
             }
         }
     </script>
