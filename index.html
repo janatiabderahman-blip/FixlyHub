@@ -3,73 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Smart Shopping Engine</title>
+    <title>AI Smart Shopping Assistant - Official</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <meta name="description" content="Global AI shopping assistant for smart discounts.">
-    <meta name="keywords" content="Amazon, AI, Shopping, Deals, Coupons, Smart Savings">
-    <meta name="robots" content="index, follow">
-    
-    <link rel="canonical" href="https://janatiabderahman-blip.github.io/my-website/">
+    <style>
+        .modal { display: none; position: fixed; z-index: 50; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans flex items-center justify-center min-h-screen p-4">
-    <div class="max-w-md w-full bg-white p-10 rounded-[3rem] shadow-2xl text-center border border-slate-100 relative overflow-hidden">
-        
-        <div class="absolute -top-10 -right-10 w-32 h-32 bg-blue-50 rounded-full blur-3xl"></div>
+<body class="bg-slate-900 text-white flex flex-col items-center justify-center min-h-screen p-4 select-none">
 
-        <div class="mb-10">
-            <h1 class="text-3xl font-black text-slate-900 tracking-tight">AI ENGINE 2.0</h1>
-            <p class="text-blue-600 font-bold text-xs uppercase tracking-[0.2em] mt-2">Verified Global Node</p>
-        </div>
+    <div class="max-w-md w-full bg-white text-slate-900 p-10 rounded-[3rem] shadow-2xl text-center relative overflow-hidden">
+        <h1 class="text-3xl font-black mb-4">SMART AI SCANNER</h1>
+        <p class="text-slate-500 text-xs mb-8">Verified Global Shopping Node: <span class="text-blue-600 font-bold">Active</span></p>
 
-        <div id="content-lock" class="space-y-8">
-            <div class="p-6 bg-slate-50 rounded-[2rem] border border-slate-100 shadow-inner">
-                <p class="text-sm text-slate-600 leading-relaxed font-semibold">
-                    "Shopping smarter, not harder! 🛒 This AI tool helps find the best stackable discounts on Amazon."
-                </p>
-            </div>
-
-            <div class="space-y-3">
-                <p class="text-[10px] text-slate-400 font-bold uppercase">System Validation Progress</p>
-                <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden p-0.5 border border-slate-200">
-                    <div id="bar" class="bg-blue-600 h-full rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(37,99,235,0.5)]" style="width: 20%"></div>
-                </div>
-            </div>
-
-            <button onclick="activateAutoSpread()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-black py-6 rounded-2xl shadow-2xl shadow-blue-100 transition-all transform active:scale-95 text-lg">
-                SHARE TO ACTIVATE ➔
+        <div id="main-ui" class="space-y-6">
+            <button onclick="startProcess()" class="w-full bg-blue-600 text-white font-black py-6 rounded-2xl shadow-xl active:scale-95 transition-all">
+                START SECURE SCAN ➔
             </button>
         </div>
 
-        <div id="reward-link" class="hidden">
-            <p class="text-green-500 font-black mb-6">✓ ACCESS GRANTED</p>
-            <a href="https://shrinkme.click/581E4" class="block w-full bg-slate-900 text-white font-extrabold py-6 rounded-2xl shadow-2xl">
-                CLAIM YOUR SMART DEALS
+        <div id="unlock-ui" class="hidden animate-pulse">
+            <a href="https://shrinkme.click/581E4" class="block w-full bg-slate-900 text-white font-black py-6 rounded-2xl">
+                GET MY DEALS NOW
             </a>
         </div>
 
-        <p class="mt-10 text-[8px] text-slate-400 font-bold tracking-widest uppercase">
-            © 2026 AI Marketing Lab | Legal & Global Entity
-        </p>
+        <div class="mt-8 pt-6 border-t border-slate-100 flex justify-center gap-4">
+            <button onclick="toggleModal()" class="text-[10px] text-slate-400 font-bold hover:underline">PRIVACY POLICY</button>
+            <span class="text-[10px] text-slate-200">|</span>
+            <span class="text-[10px] text-slate-400 font-bold">LEGAL ENTITY 2026</span>
+        </div>
+    </div>
+
+    <div id="privacyModal" class="modal items-center justify-center p-6">
+        <div class="bg-white text-slate-900 p-8 rounded-3xl max-w-sm w-full">
+            <h2 class="text-xl font-black mb-4 border-b pb-2">Privacy Policy</h2>
+            <div class="text-[10px] text-left space-y-2 leading-relaxed h-48 overflow-y-auto">
+                <p>1. <strong>Data Collection:</strong> We do not collect personal information, IP addresses, or location data.</p>
+                <p>2. <strong>Marketing:</strong> This tool uses affiliate and marketing links to provide free shopping analysis services.</p>
+                <p>3. <strong>Cookies:</strong> We use minimal cookies to track session progress only.</p>
+                <p>4. <strong>Legal:</strong> This service is a shopping assistant and is not affiliated with any brand mentioned. Operating under international digital marketing laws.</p>
+            </div>
+            <button onclick="toggleModal()" class="mt-6 w-full bg-slate-100 py-3 rounded-xl font-bold text-xs">CLOSE</button>
+        </div>
     </div>
 
     <script>
-        let clicks = 1;
-        function activateAutoSpread() {
-            const link = "https://janatiabderahman-blip.github.io/my-website/";
-            const text = "Shopping smarter, not harder! 🛒 This AI tool helps me find and calculate the best stackable discounts on Amazon. Total game changer! 🔥 Get it here: ";
-            
-            // فتح نافذة المشاركة (النشر الفيروسي)
-            window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(text + link));
-            
-            clicks++;
-            let progress = (clicks / 5) * 100;
-            document.getElementById('bar').style.width = (progress > 100 ? 100 : progress) + "%";
-            
-            if(clicks >= 5) {
-                document.getElementById('content-lock').classList.add('hidden');
-                document.getElementById('reward-link').classList.remove('hidden');
+        let counter = 0;
+        function startProcess() {
+            window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent("Shopping smarter with AI! 🛒 Try this legal tool: https://janatiabderahman-blip.github.io/my-website/"));
+            counter++;
+            if(counter >= 5) {
+                document.getElementById('main-ui').classList.add('hidden');
+                document.getElementById('unlock-ui').classList.remove('hidden');
             }
+        }
+        function toggleModal() {
+            const modal = document.getElementById('privacyModal');
+            modal.style.display = (modal.style.display === 'flex' ? 'none' : 'flex');
         }
     </script>
 </body>
