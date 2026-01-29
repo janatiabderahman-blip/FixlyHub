@@ -3,108 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pro Deals AI | مرصد الصفقات العالمي الموثوق</title>
+    <title>Pro Deals AI | منصة تحليل الصفقات الرقمية</title>
     
     <script async src="https://pl28602600.effectivegatecpm.com/ea/11/8e/ea118ebfb63558281df1adbb61290596.js"></script>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
-        :root { --main-blue: #2563eb; --slate-dark: #0f172a; }
-        body { font-family: 'Cairo', 'Inter', sans-serif; background-color: #ffffff; color: var(--slate-dark); }
-        .hero-section { background: radial-gradient(circle at top right, #f8fafc, #ffffff); border-bottom: 1px solid #f1f5f9; }
-        .deal-card { border: 1px solid #e2e8f0; border-radius: 1.5rem; transition: 0.3s ease-in-out; background: #ffffff; }
-        .deal-card:hover { border-color: var(--main-blue); transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05); }
-        .btn-action { background: var(--main-blue); color: white; font-weight: 700; border-radius: 1rem; transition: 0.3s; }
-        .btn-action:hover { background: #1d4ed8; transform: scale(1.02); }
+        body { font-family: 'Cairo', sans-serif; scroll-behavior: smooth; background-color: #f8fafc; }
+        .ad-container { min-height: 100px; display: flex; justify-content: center; align-items: center; }
+        .pro-card { background: white; border: 1px solid #e2e8f0; border-radius: 1.5rem; transition: 0.3s; }
+        .pro-card:hover { border-color: #3b82f6; box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1); }
+        /* ضمان عدم تداخل الإعلانات مع العناصر الأساسية */
+        .adsterra-ad-overlay { z-index: 9999 !important; }
     </style>
 </head>
-<body>
+<body class="text-slate-900">
 
-    <nav class="border-b bg-white/80 backdrop-blur-md sticky top-0 z-50">
+    <nav class="bg-white border-b sticky top-0 z-40">
         <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center text-white font-black text-[10px]">PD</div>
-                <span class="text-xl font-black tracking-tighter">PRO DEALS <span class="text-blue-600">AI</span></span>
+                <span class="bg-blue-600 text-white px-2 py-1 rounded font-bold text-sm">AI</span>
+                <span class="text-xl font-black text-slate-800">PRO DEALS</span>
             </div>
-            <div class="text-[10px] font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-100 uppercase">
-                Global Research Hub
+            <div class="text-[10px] bg-green-50 text-green-700 px-3 py-1 rounded-full font-bold border border-green-100 uppercase">
+                Secure & Verified SSL
             </div>
         </div>
     </nav>
 
-    <section class="hero-section py-20 px-6">
-        <div class="max-w-3xl mx-auto text-center space-y-8">
-            <h1 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight">دليلك الذكي لتجنب العروض الوهمية والتسوق بأمان</h1>
-            <p class="text-lg text-slate-500">نستخدم خوارزميات تحليل البيانات لرصد أقوى التخفيضات الحقيقية في أمازون وتيمو، لضمان حصولك على أعلى قيمة مقابل مالك.</p>
-            <div class="flex flex-wrap justify-center gap-4 pt-4">
-                <a href="#market" class="btn-action px-10 py-4 shadow-lg">استعرض الصفقات الموثوقة</a>
-                <a href="mailto:support@prodealsai.com" class="bg-slate-100 text-slate-600 px-10 py-4 rounded-xl font-bold hover:bg-slate-200 transition">تواصل معنا</a>
-            </div>
-        </div>
-    </section>
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        <header class="text-center mb-16 space-y-6">
+            <h1 class="text-3xl md:text-5xl font-black leading-tight">مركز رصد الصفقات والتحقق من القيمة</h1>
+            <p class="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed">
+                نحن نوفر للمستهلكين في الشرق الأوسط تقارير يومية حول أفضل العروض المتاحة في المتاجر العالمية، مع التأكد من مطابقتها لمعايير الجودة والسعر العادل.
+            </p>
+        </header>
 
-    <section class="py-20 px-6 max-w-5xl mx-auto">
-        <div class="grid md:grid-cols-3 gap-8 text-center">
-            <div class="p-6">
-                <div class="text-3xl mb-4">🛡️</div>
-                <h3 class="font-bold text-lg mb-2 text-slate-900">أمان 100%</h3>
-                <p class="text-sm text-slate-500">نوجهك فقط للروابط الرسمية والمشفرة للمتاجر العالمية.</p>
+        <section class="grid md:grid-cols-2 gap-8 mb-20">
+            <div class="pro-card p-8">
+                <h3 class="font-bold text-xl mb-4 text-blue-600">منهجية الرصد</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">
+                    نعتمد على مقارنة الأسعار اللحظية لضمان أن العرض المعلن هو خصم حقيقي. نقوم بفلترة آلاف المنتجات يومياً لنقدم لك أفضل 1% من العروض فقط.
+                </p>
             </div>
-            <div class="p-6">
-                <div class="text-3xl mb-4">📊</div>
-                <h3 class="font-bold text-lg mb-2 text-slate-900">تحليل الأسعار</h3>
-                <p class="text-sm text-slate-500">نقارن السعر الحالي بمتوسط الأسعار التاريخي لضمان الخصم.</p>
+            <div class="pro-card p-8">
+                <h3 class="font-bold text-xl mb-4 text-blue-600">شفافية الروابط</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">
+                    جميع الوجهات الخارجية مشفرة وتؤدي مباشرة إلى المتاجر الرسمية المعتمدة. خصوصية المستخدم وأمانه الرقمي هي أولويتنا القصوى.
+                </p>
             </div>
-            <div class="p-6">
-                <div class="text-3xl mb-4">🌍</div>
-                <h3 class="font-bold text-lg mb-2 text-slate-900">تغطية عالمية</h3>
-                <p class="text-sm text-slate-500">خدماتنا تشمل السعودية، الإمارات، وأسواق أمريكا وأوروبا.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="market" class="py-20 px-6 bg-slate-50 border-y border-slate-100">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-2xl font-black mb-12 text-center">أحدث تقارير الصفقات المفعلة</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="deal-card p-8">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" class="h-6 mb-6 opacity-80" alt="Amazon">
-                    <h4 class="text-xl font-bold mb-3">أمازون السعودية</h4>
-                    <p class="text-sm text-slate-500 mb-8">تم التحقق من عروض قسم الإلكترونيات والمنزل. خصومات تصل إلى 60%.</p>
-                    <a href="https://www.amazon.sa/gp/bestsellers/?tag=abdo20260ea-21" rel="noopener noreferrer" class="block w-full text-center btn-action py-4">زيارة المتجر الرسمي</a>
+        <section class="space-y-6">
+            <div class="bg-slate-900 rounded-3xl p-8 md:p-12 text-center text-white relative overflow-hidden">
+                <div class="relative z-10 space-y-6">
+                    <h2 class="text-2xl font-bold">استعرض تقارير الصفقات اليومية</h2>
+                    <div class="flex flex-col md:flex-row gap-4 justify-center">
+                        <a href="https://www.amazon.sa/gp/bestsellers/?tag=abdo20260ea-21" rel="noopener noreferrer" class="bg-white text-slate-900 px-8 py-4 rounded-xl font-black hover:bg-blue-50 transition">أمازون السعودية</a>
+                        <a href="https://temu.to/k/ehsqckgdgv7" rel="noopener noreferrer" class="bg-orange-600 text-white px-8 py-4 rounded-xl font-black hover:bg-orange-50 transition">مركز مكافآت تيمو</a>
+                    </div>
                 </div>
-                <div class="deal-card p-8">
-                    <div class="text-orange-600 font-black text-2xl mb-6 italic tracking-tighter">TEMU</div>
-                    <h4 class="text-xl font-bold mb-3">مركز مكافآت تيمو</h4>
-                    <p class="text-sm text-slate-500 mb-8">هدايا وقسائم شراء للمستخدمين الجدد. فعل العرض الآن عبر الرابط المعتمد.</p>
-                    <a href="https://temu.to/k/ehsqckgdgv7" rel="noopener noreferrer" class="block w-full text-center bg-orange-600 text-white py-4 rounded-xl font-bold hover:bg-orange-500 transition">احصل على المكافأة</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-20 px-6 bg-white border-t border-slate-100">
-        <div class="max-w-5xl mx-auto space-y-12">
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="space-y-4">
-                    <h5 class="font-black text-xs text-slate-400 uppercase tracking-widest">إخلاء مسؤولية</h5>
-                    <p class="text-xs text-slate-500 leading-relaxed italic">
-                        نحن منصة مستقلة لتحليل البيانات. كشركاء في برامج العمولات، قد نتقاضى عمولة بسيطة عند الشراء من خلال روابطنا، وهذا لا يؤثر إطلاقاً على السعر الذي تدفعه، بل يساعدنا على استمرار الخدمة مجاناً.
-                    </p>
-                </div>
-                <div class="space-y-4 md:text-left text-right">
-                    <h5 class="font-black text-xs text-slate-400 uppercase tracking-widest">Legal & Privacy</h5>
-                    <div class="flex gap-6 text-xs font-bold text-blue-600">
-                        <button onclick="alert('Privacy Policy: No personal data is stored.')" class="hover:underline">Privacy</button>
-                        <button onclick="alert('Terms: Users must be 18+ to shop.')" class="hover:underline">Terms</button>
-                        <a href="mailto:support@prodealsai.com" class="hover:underline">Contact</a>
+                <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                    <div class="grid grid-cols-6 h-full">
+                        <div class="border-r border-white"></div><div class="border-r border-white"></div><div class="border-r border-white"></div>
                     </div>
                 </div>
             </div>
-            <div class="pt-10 border-t text-center text-[10px] font-black text-slate-300 uppercase tracking-[0.4em]">
-                © 2026 PRO DEALS AI | SMART CONSUMER UNIT
+        </section>
+    </main>
+
+    <footer class="bg-white border-t py-16 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 text-xs text-slate-400">
+                <div class="space-y-4">
+                    <h5 class="font-black text-slate-800 uppercase tracking-widest">إفصاح الشراكة</h5>
+                    <p class="leading-relaxed">
+                        بصفتنا منصة إرشادية، قد نحصل على عمولة عند إتمام عمليات شراء عبر الروابط الموجودة. هذا يدعم فريق العمل لتقديم تحليلات دقيقة ومستمرة. نحن لا نجمع أي بيانات بنكية أو شخصية.
+                    </p>
+                </div>
+                <div class="space-y-4 flex flex-col justify-end">
+                    <div class="flex gap-4 font-bold text-blue-600">
+                        <a href="#" class="hover:underline">سياسة الخصوصية</a>
+                        <a href="#" class="hover:underline">شروط الخدمة</a>
+                        <a href="mailto:support@prodealsai.com" class="hover:underline">الدعم الفني</a>
+                    </div>
+                    <p>© 2026 Pro Deals AI | Global Verified Research</p>
+                </div>
             </div>
         </div>
     </footer>
