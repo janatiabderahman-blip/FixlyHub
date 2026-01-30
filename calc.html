@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Discount Calculator | FixlyHub</title>
+
+    <meta name="description" content="Use FixlyHub's smart discount calculator to instantly find the final price after any discount. Perfect for online deals and smart shopping.">
+    <meta name="keywords" content="discount calculator, price after discount, shopping deals, coupons, smart shopping">
+
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            background: #0f172a;
+            color: #f1f5f9;
+            text-align: center;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        .box {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 420px;
+            margin: auto;
+            border: 1px solid #334155;
+            box-shadow: 0 0 20px rgba(0,0,0,0.25);
+        }
+        input {
+            width: 92%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border: none;
+            font-size: 18px;
+            background: #0f172a;
+            color: #fff;
+        }
+        button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            width: 100%;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.2s;
+        }
+        button:hover {
+            background: #2563eb;
+        }
+        .res {
+            font-size: 32px;
+            color: #10b981;
+            margin: 20px 0;
+            font-weight: bold;
+            min-height: 40px;
+        }
+        .link {
+            display: block;
+            background: linear-gradient(45deg, #f59e0b, #ef4444);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.2s;
+        }
+        .link:hover {
+            opacity: 0.9;
+        }
+        .content {
+            max-width: 600px;
+            margin: 40px auto 0;
+            text-align: left;
+            color: #e2e8f0;
+            font-size: 15px;
+        }
+        h3 {
+            color: #38bdf8;
+        }
+        a.back-home {
+            display: inline-block;
+            margin-bottom: 18px;
+            font-size: 12px;
+            color: #93c5fd;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        a.back-home:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-home">← Back to FixlyHub AI</a>
+
+    <div class="box">
+        <h2>💰 Smart Discount Calculator</h2>
+        <p style="font-size:13px;color:#94a3b8;margin-top:4px;">
+            Quickly see the real price after any discount.
+        </p>
+
+        <input type="number" id="p" placeholder="Original Price ($)">
+        <input type="number" id="d" placeholder="Discount %">
+
+        <button onclick="calculate()">Calculate</button>
+
+        <div class="res" id="r"></div>
+
+        <!-- KEEP YOUR CPA LINK -->
+        <a href="https://shrinkme.io/your_link" class="link">
+            🎁 Get Global Coupons & Smart Deals
+        </a>
+    </div>
+
+    <div class="content">
+        <h3>Why This Calculator Matters</h3>
+        <p>
+            Many online deals look attractive but hide the real value behind percentages and time-limited offers.
+            By calculating the final price, you can decide calmly if a deal is truly worth it.
+        </p>
+
+        <h3>Smart Shopping Tips</h3>
+        <ul>
+            <li>Compare the final price with other stores, not just the discount percentage.</li>
+            <li>Check if shipping or extra fees cancel the discount.</li>
+            <li>Use verified coupons and rewards instead of random codes from untrusted sources.</li>
+        </ul>
+
+        <p>
+            For more tools and AI guidance on payments and deals, visit
+            <a href="index.html" style="color:#93c5fd;font-weight:600;">FixlyHub AI</a>.
+        </p>
+    </div>
+
+    <script>
+        function calculate() {
+            const p = parseFloat(document.getElementById('p').value);
+            const d = parseFloat(document.getElementById('d').value);
+            const r = document.getElementById('r');
+
+            if (!p || !d || p < 0 || d < 0) {
+                r.innerText = "Enter valid positive numbers";
+                r.style.color = "#f87171";
+                return;
+            }
+
+            const finalPrice = p - (p * d / 100);
+            r.innerText = "$" + finalPrice.toFixed(2);
+            r.style.color = "#10b981";
+        }
+    </script>
+</body>
+</html>
