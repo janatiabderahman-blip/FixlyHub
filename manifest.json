@@ -1,0 +1,16 @@
+{
+  "name": "FixlyHub AI – Payments & Deals Assistant",
+  "short_name": "FixlyHub",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/5968/5968204.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
