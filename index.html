@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixlyHub AI | Global Solution Center & Digital Vault</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --p: #2563eb; --s: #f97316; --bg: #ffffff; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; overflow-x: hidden; }
+        .page { display: none; }
+        .active { display: block; animation: zoomIn 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        @keyframes zoomIn { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
+        
+        .ai-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
+        .glass-ui { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(0,0,0,0.05); }
+        .premium-card { background: white; border-radius: 28px; border: 1px solid #e2e8f0; transition: 0.4s; overflow: hidden; }
+        .premium-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px -12px rgba(0,0,0,0.1); border-color: var(--p); }
+        
+        #social-notif { position: fixed; bottom: 30px; left: 30px; z-index: 9999; display: none; }
+        .search-shimmer { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); background-size: 200% 100%; animation: shimmer 1.5s infinite; }
+        @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+        
+        .article-content h2 { font-size: 1.5rem; font-weight: 800; color: #0f172a; margin: 25px 0 10px; }
+        .article-content p { color: #475569; line-height: 1.8; margin-bottom: 15px; }
+        .cta-box { background: #f1f5f9; border-left: 5px solid var(--p); padding: 20px; border-radius: 12px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+
+    <div id="social-notif" class="glass-ui p-4 rounded-2xl flex items-center space-x-3 shadow-2xl">
+        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+        <span id="notif-txt" class="text-xs font-bold text-slate-800"></span>
+    </div>
+
+    <nav class="sticky top-0 z-[1000] glass-ui px-8 py-5 flex justify-between items-center">
+        <div class="flex items-center space-x-3 cursor-pointer" onclick="showPage('home')">
+            <div class="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg">
+                <i class="fas fa-microchip"></i>
+            </div>
+            <span class="text-xl font-black tracking-tighter">FIXLY<span class="text-blue-600 uppercase">Hub</span></span>
+        </div>
+        <div class="bg-green-50 text-green-600 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest">
+            AI Engine: Active
+        </div>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-6 py-10">
+
+        <section id="home" class="page active">
+            <header class="text-center py-12">
+                <h1 class="text-5xl font-black text-slate-900 mb-6 tracking-tighter leading-tight">The Future of <br><span class="text-blue-600 underline decoration-blue-200">Problem Solving.</span></h1>
+                <p class="text-slate-500 text-base mb-10 max-w-lg mx-auto">Instant AI-powered resolutions for global payment issues, shopping hacks, and tech errors.</p>
+                
+                <div class="relative max-w-xl mx-auto mb-6">
+                    <input type="text" id="ai-query" placeholder="Ask AI: How to fix PayPal hold?" 
+                    class="w-full px-8 py-6 rounded-[2rem] border-none shadow-2xl focus:ring-4 focus:ring-blue-100 outline-none text-lg">
+                    <button onclick="processAI()" class="absolute right-3 top-3 bottom-3 px-6 bg-slate-900 text-white rounded-[1.5rem] font-bold hover:bg-blue-600 transition">
+                        Solve It
+                    </button>
+                </div>
+            </header>
+
+            <div class="my-8 min-h-[100px] flex items-center justify-center bg-slate-100 rounded-3xl overflow-hidden border-2 border-dashed border-slate-200">
+                <script type="text/javascript">
+                    atOptions = { 'key' : '83943f65e26f56111f818f0f0402173f', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/83943f65e26f56111f818f0f0402173f/invoke.js"></script>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mt-12">
+                <div class="premium-card p-8 ai-gradient text-white">
+                    <span class="text-[9px] font-black uppercase bg-blue-500/30 px-3 py-1 rounded-full mb-4 inline-block">Flash Deal</span>
+                    <h3 class="text-xl font-bold mb-2">Temu Reward Bundle</h3>
+                    <p class="text-white/60 text-xs mb-6 leading-relaxed">System detected a $100 reward for your IP address. Claim before expiry.</p>
+                    <a href="https://temu.to/k/ehsqckgdgv7" target="_blank" class="block w-full text-center bg-white text-slate-900 py-4 rounded-2xl font-black text-sm transition hover:bg-blue-50">Claim Bundle →</a>
+                </div>
+                <div class="premium-card p-8">
+                    <i class="fab fa-amazon text-3xl text-orange-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2 text-slate-900">Amazon Bestsellers</h3>
+                    <p class="text-slate-500 text-xs mb-6">Daily curated list of high-demand items with verified 2026 discounts.</p>
+                    <a href="https://www.amazon.sa/gp/bestsellers/?tag=abdo20260ea-21" target="_blank" class="block w-full text-center bg-slate-900 text-white py-4 rounded-2xl font-black text-sm transition hover:bg-blue-600">Explore Deals</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="ai-view" class="page py-10">
+            <button onclick="showPage('home')" class="text-blue-600 font-black text-xs uppercase mb-8"><i class="fas fa-arrow-left mr-2"></i> New Analysis</button>
+            <div id="ai-loader" class="hidden text-center py-20">
+                <div class="inline-block w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+                <p class="mt-4 font-bold text-slate-400 uppercase tracking-widest text-[10px]">Processing Database...</p>
+            </div>
+            <div id="ai-content" class="premium-card p-10 article-content"></div>
+        </section>
+
+        <section id="vault" class="page py-10">
+            <h2 class="text-3xl font-black mb-8">Daily <span class="text-blue-600">Intelligence</span></h2>
+            <div id="vault-list" class="grid gap-6"></div>
+        </section>
+
+    </main>
+
+    <footer class="mt-20 border-t py-16 text-center bg-white">
+        <p class="text-[10px] font-black text-slate-300 uppercase tracking-[0.6em] mb-6">FixlyHub AI Global • 2026</p>
+        <div class="flex justify-center space-x-6 text-slate-400 text-xs font-bold">
+            <a href="#" class="hover:text-blue-600">Privacy</a>
+            <a href="#" class="hover:text-blue-600">Terms</a>
+            <a href="#" class="hover:text-blue-600">API</a>
+        </div>
+    </footer>
+
+    <script>
+        // --- High-Intelligence Database ---
+        const db = [
+            {
+                tags: ["paypal", "hold", "pending", "money"],
+                title: "Resolving PayPal Payment Holds",
+                body: "<b>Analysis:</b> Transaction flagged for standard security verification.<br><br><b>AI Recommended Steps:</b><br>1. Navigate to activity details.<br>2. Select 'Print shipping label' or 'Update Order Status'.<br>3. Change status to 'Completed/Service Rendered'.<br>4. Funds release typically within 24-48 hours after buyer confirmation.",
+                link: "https://www.paypal.com"
+            },
+            {
+                tags: ["aliexpress", "shipping", "choice", "slow"],
+                title: "AliExpress Choice & Fast Shipping Hack",
+                body: "<b>Analysis:</b> User is experiencing standard logistics delays.<br><br><b>AI Recommended Steps:</b><br>Our data suggests using 'AliExpress Choice' for 10-day guaranteed delivery. Choice products are pre-cleared for customs.",
+                link: "https://s.click.aliexpress.com/e/_DDAxxxx"
+            },
+            {
+                tags: ["temu", "reward", "coupon", "bundle", "100"],
+                title: "Temu $100 Bundle Activation Protocol",
+                body: "<b>Analysis:</b> Promo bundle available for new device signatures.<br><br><b>AI Recommended Steps:</b><br>1. Clear browser cookies.<br>2. Access the secure portal via the link below.<br>3. Complete registration to unlock the $100 credit pool.",
+                link: "https://temu.to/k/ehsqckgdgv7"
+            }
+        ];
+
+        // --- Core Intelligence Engine ---
+        function processAI() {
+            const query = document.getElementById('ai-query').value.toLowerCase();
+            if(!query) return;
+
+            showPage('ai-view');
+            document.getElementById('ai-loader').classList.remove('hidden');
+            document.getElementById('ai-content').innerHTML = '';
+
+            setTimeout(() => {
+                document.getElementById('ai-loader').classList.add('hidden');
+                const match = db.find(item => item.tags.some(tag => query.includes(tag)));
+
+                if(match) {
+                    document.getElementById('ai-content').innerHTML = `
+                        <div class="bg-blue-50 text-blue-600 px-4 py-1.5 rounded-full text-[9px] font-black uppercase inline-block mb-6">AI Solution Verified</div>
+                        <h1>${match.title}</h1>
+                        <p>${match.body}</p>
+                        <div class="cta-box">
+                            <h4 class="font-bold mb-2">Resource Detected:</h4>
+                            <p class="text-xs mb-4 text-slate-500 font-bold uppercase">Click below to proceed to the secure resolution portal.</p>
+                            <a href="${match.link}" target="_blank" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-xl font-bold text-sm">Access Portal →</a>
+                        </div>
+                    `;
+                } else {
+                    document.getElementById('ai-content').innerHTML = `
+                        <h2>Inconclusive Data</h2>
+                        <p>Our AI could not find a direct match. However, the <b>FixlyHub Vault</b> contains daily updated solutions for general shopping and payment issues.</p>
+                        <button onclick="showPage('vault')" class="bg-slate-900 text-white px-6 py-3 rounded-xl font-bold text-xs mt-4">Browse Vault</button>
+                    `;
+                }
+            }, 1500);
+        }
+
+        function showPage(id) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            window.scrollTo({top:0, behavior:'smooth'});
+        }
+
+        function renderVault() {
+            const list = document.getElementById('vault-list');
+            const dateStr = new Date().toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' });
+            list.innerHTML = db.map(item => `
+                <div class="premium-card p-6 cursor-pointer" onclick="document.getElementById('ai-query').value='${item.tags[0]}'; processAI();">
+                    <span class="text-blue-600 text-[9px] font-black uppercase tracking-widest mb-1 block">Updated: ${dateStr}</span>
+                    <h3 class="text-xl font-extrabold text-slate-900">${item.title}</h3>
+                </div>
+            `).join('');
+        }
+
+        // --- Automated Marketing ---
+        const actions = ["resolved a PayPal hold", "claimed $100 Temu gift", "found a 90% Amazon discount", "fixed AliExpress shipping error"];
+        function socialProof() {
+            const el = document.getElementById('social-notif');
+            const txt = document.getElementById('notif-txt');
+            txt.innerText = `Someone just ${actions[Math.floor(Math.random()*actions.length)]}`;
+            el.style.display = 'flex';
+            setTimeout(() => { el.style.display = 'none'; }, 5000);
+        }
+        setInterval(socialProof, 15000);
+
+        // --- System Start ---
+        window.onload = () => {
+            renderVault();
+            const s = document.createElement("script");
+            s.src = "https://pl28602600.effectivegatecpm.com/ea/11/8e/ea118ebfb63558281df1adbb61290596.js";
+            s.async = true;
+            document.body.appendChild(s);
+        };
+    </script>
+</body>
+</html>
