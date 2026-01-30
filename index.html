@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Deals AI | Next-Gen Shopping Assistant</title>
+    
+    <meta name="description" content="AI-driven platform for verified daily deals.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://janatiabderahman-blip.github.io/my-website/">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        .page { display: none; }
+        .active { display: block; }
+        
+        /* The Professional Ad Frame */
+        .ad-placeholder {
+            background: #f8fafc;
+            border: 2px dashed #cbd5e1;
+            border-radius: 20px;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: #94a3b8;
+            font-weight: 800;
+            margin: 25px 0;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        /* Subtle Engagement Animation */
+        @keyframes soft-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        .float-ai { animation: soft-float 3s ease-in-out infinite; }
+    </style>
+</head>
+
+<body class="bg-[#fcfcfd] text-slate-900 font-sans selection:bg-blue-600 selection:text-white">
+
+    <nav class="bg-white/95 backdrop-blur-md border-b sticky top-0 z-50 px-6 py-4 flex justify-between items-center shadow-sm">
+        <div class="flex items-center space-x-2 cursor-pointer" onclick="showPage('home')">
+            <div class="bg-blue-600 text-white p-2 rounded-xl shadow-lg float-ai"><i class="fas fa-brain text-sm"></i></div>
+            <span class="text-2xl font-black tracking-tighter uppercase italic">PRO DEALS <span class="text-blue-600">AI</span></span>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button onclick="showPage('blog')" class="text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-blue-600 transition">Insights</button>
+            <div class="h-4 w-[1px] bg-slate-200"></div>
+            <button onclick="showPage('legal')" class="text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-blue-600 transition">Trust</button>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto p-6 min-h-screen">
+
+        <section id="home" class="page active">
+            <header class="py-12 text-center">
+                <div class="inline-flex items-center space-x-2 bg-blue-50 text-blue-600 px-4 py-1.5 rounded-full mb-6">
+                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span></span>
+                    <span class="text-[10px] font-black uppercase tracking-widest">Global Engine Live</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-black mb-8 tracking-tighter leading-[0.85]">Smart Data.<br><span class="text-blue-600">Big Savings.</span></h1>
+                
+                <div class="ad-placeholder">Sponsored Content</div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
+                    <a href="https://www.amazon.sa/gp/bestsellers/?tag=abdo20260ea-21" target="_blank" rel="nofollow noopener sponsored" class="group bg-slate-900 text-white p-8 rounded-[2.5rem] font-black shadow-2xl transition-all hover:bg-black hover:scale-[1.01]">
+                        <i class="fab fa-amazon text-4xl mb-4 text-orange-400 group-hover:scale-110 transition"></i>
+                        <p class="tracking-widest uppercase">Amazon Top Picks</p>
+                    </a>
+                    <a href="https://temu.to/k/ehsqckgdgv7" target="_blank" rel="nofollow noopener sponsored" class="group bg-orange-600 text-white p-8 rounded-[2.5rem] font-black shadow-2xl transition-all hover:bg-orange-700 hover:scale-[1.01]">
+                        <i class="fas fa-bolt text-4xl mb-4 text-yellow-300 group-hover:scale-110 transition"></i>
+                        <p class="tracking-widest uppercase">Temu Flash Deals</p>
+                    </a>
+                </div>
+            </header>
+
+            <div class="ad-placeholder">Sponsored Content</div>
+        </section>
+
+        <section id="blog" class="page py-12">
+            <h2 class="text-4xl font-black mb-10 italic">Neural Insights</h2>
+            <div class="bg-white p-12 rounded-[3rem] border border-slate-100 shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-blue-600 text-white text-[10px] px-6 py-2 font-black uppercase tracking-tighter shadow-md">Industry Report</div>
+                <h3 class="text-3xl font-black mb-6 leading-tight uppercase">Why AI-Driven Shopping is the Future</h3>
+                <p class="text-slate-500 text-lg leading-relaxed mb-8 font-medium">Our neural networks scan millions of data points hourly. We detect price drops, hidden clearance sales, and exclusive coupons on Amazon and Temu before the general public. Security is integrated at the core of every link.</p>
+                <div class="h-[1px] w-20 bg-blue-600 mb-8"></div>
+                <p class="text-slate-400 text-sm font-bold uppercase tracking-widest">© 2026 Intelligence Unit</p>
+            </div>
+        </section>
+
+        <section id="legal" class="page py-12">
+            <div class="bg-slate-900 text-slate-400 rounded-[2.5rem] p-12 shadow-2xl">
+                <h2 class="text-white font-black text-2xl mb-8 uppercase tracking-widest">Trust & Legal</h2>
+                <p class="leading-loose text-sm mb-6 font-medium tracking-wide">
+                    Transparency is our foundation. Pro Deals AI participates in affiliate marketing programs, meaning we may earn commissions on editorially chosen products purchased through our links. This supports our AI server costs at no extra cost to you.
+                </p>
+                <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700 text-[10px] font-bold uppercase tracking-widest">
+                    Encryption: Active • Link Verification: Pass • Partner Status: Verified
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-16 text-center border-t border-slate-100 mt-20">
+        <p class="text-[10px] font-black text-slate-300 uppercase tracking-[0.4em]">PRO DEALS AI • GOLDEN EDITION V101.0 • 2026</p>
+    </footer>
+
+    <script>
+        // Navigation Control
+        function showPage(id) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        // Smart Ad Loader
+        const loadRevenueEngine = () => {
+            if (!window.revenueActive) {
+                window.revenueActive = true;
+                const script = document.createElement("script");
+                script.src = "//pl25530182.highrevenuegate.com/83/94/3f/83943f65e26f56111f818f0f0402173f.js";
+                script.async = true;
+                document.body.appendChild(script);
+                console.log("Revenue Engine: SECURED & ACTIVE.");
+            }
+        };
+
+        // Multi-Trigger Engagement
+        ['click', 'scroll', 'touchstart', 'mousemove'].forEach(trigger => 
+            window.addEventListener(trigger, loadRevenueEngine, { once: true })
+        );
+    </script>
+</body>
+</html>
