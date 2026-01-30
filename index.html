@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixlyHub | Smart Digital Solutions</title>
+    <meta name="description" content="Step-by-step guides for online shopping, payments, and app challenges. Practical and fast solutions.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        .page { display: none; }
+        .active { display: block; }
+        .card { border: 1px solid #f1f5f9; border-radius: 16px; padding: 20px; background: #ffffff; transition: all 0.2s ease-in-out; position: relative; overflow: hidden; }
+        .card:hover { transform: translateY(-2px); border-color: #e2e8f0; box-shadow: 0 10px 20px rgba(0,0,0,0.02); }
+        .ad-space { background: #fafafa; border: 1px dashed #cbd5e1; border-radius: 12px; min-height: 90px; display: flex; align-items: center; justify-content: center; overflow: hidden; margin: 20px 0; }
+        #notification { position: fixed; bottom: 20px; left: 20px; background: white; padding: 12px 20px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-left: 4px solid #2563eb; display: none; z-index: 1000; font-size: 12px; font-weight: 700; }
+        .btn-blue { background: #2563eb; color: white; padding: 8px 16px; border-radius: 8px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; transition: 0.2s; }
+        .btn-blue:hover { background: #1d4ed8; }
+    </style>
+</head>
+<body class="bg-white text-slate-800 font-sans leading-relaxed">
+
+    <nav class="border-b px-6 py-5 flex justify-between items-center sticky top-0 bg-white/95 backdrop-blur-sm z-50">
+        <div class="flex items-center space-x-2 cursor-pointer" onclick="showPage('home')">
+            <div class="bg-blue-600 text-white p-1 rounded-md text-[10px]"><i class="fas fa-bolt"></i></div>
+            <span class="text-xl font-black tracking-tighter text-slate-900 uppercase">FIXLY<span class="text-blue-600">HUB</span></span>
+        </div>
+        <div class="flex space-x-6 text-[10px] font-bold uppercase tracking-widest text-slate-400">
+            <button onclick="showPage('home')" class="hover:text-blue-600 transition">Home</button>
+            <button onclick="showPage('guides')" class="hover:text-blue-600 transition">Guides</button>
+        </div>
+    </nav>
+
+    <div id="notification"><i class="fas fa-shopping-bag text-blue-600 mr-2"></i><span id="notif-text">Someone just saved $42!</span></div>
+
+    <main class="max-w-2xl mx-auto p-6 min-h-screen">
+
+        <section id="home" class="page active">
+            <header class="py-10">
+                <h1 class="text-3xl font-bold text-slate-900 mb-2 tracking-tight">Expert Guides for Your <br><span class="text-blue-600">Digital Journey</span></h1>
+                <p class="text-slate-500 text-sm max-w-sm">Actionable steps to resolve your shopping, payment, and application hurdles instantly.</p>
+            </header>
+
+            <div class="ad-space">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '83943f65e26f56111f818f0f0402173f',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/83943f65e26f56111f818f0f0402173f/invoke.js"></script>
+            </div>
+
+            <div class="grid gap-4 mt-6">
+                <div class="card border-blue-100 bg-blue-50/20">
+                    <div class="flex justify-between items-start mb-3">
+                        <div>
+                            <h2 class="font-black text-slate-900 text-xs uppercase tracking-widest">Amazon Top Deals</h2>
+                            <p class="text-[11px] text-slate-500 mt-1">Global verified discounts up to 90%.</p>
+                        </div>
+                        <span class="bg-orange-100 text-orange-600 text-[8px] px-2 py-0.5 rounded-full font-black">ACTIVE</span>
+                    </div>
+                    <a href="https://www.amazon.sa/gp/bestsellers/?tag=abdo20260ea-21" target="_blank" rel="nofollow noopener sponsored" class="btn-blue inline-block">Shop Best Sellers</a>
+                </div>
+
+                <div class="card border-orange-100 bg-orange-50/20">
+                    <div class="flex justify-between items-start mb-3">
+                        <div>
+                            <h2 class="font-black text-slate-900 text-xs uppercase tracking-widest text-orange-600">Temu Rewards</h2>
+                            <p class="text-[11px] text-slate-500 mt-1">Exclusive rewards for first-time app users.</p>
+                        </div>
+                        <span class="bg-green-100 text-green-600 text-[8px] px-2 py-0.5 rounded-full font-black">LIMITED</span>
+                    </div>
+                    <a href="https://temu.to/k/ehsqckgdgv7" target="_blank" rel="nofollow noopener sponsored" class="btn-blue inline-block">Claim $100 Bundle</a>
+                </div>
+            </div>
+
+            <div class="ad-space">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '83943f65e26f56111f818f0f0402173f',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/83943f65e26f56111f818f0f0402173f/invoke.js"></script>
+            </div>
+        </section>
+
+        <section id="guides" class="page py-10">
+            <h2 class="text-xl font-black mb-8 uppercase tracking-tighter">Latest Solutions</h2>
+
+            <article class="border-b border-slate-50 pb-8 mb-8">
+                <div class="flex items-center space-x-2 mb-3">
+                    <span class="bg-blue-100 text-blue-600 text-[9px] px-2 py-0.5 rounded font-bold uppercase">Payments</span>
+                    <span class="text-slate-300 text-[9px] font-bold">JAN 2026</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 leading-tight mb-2">How to resolve PayPal "Money on Hold" status</h3>
+                <p class="text-sm text-slate-500 mb-4">A technical breakdown of why funds are held and how to accelerate the release process safely.</p>
+                <button onclick="showPage('home')" class="text-blue-600 text-xs font-black uppercase tracking-widest">Read Solution <i class="fas fa-chevron-right ml-1"></i></button>
+            </article>
+
+            <div class="ad-space">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '83943f65e26f56111f818f0f0402173f',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/83943f65e26f56111f818f0f0402173f/invoke.js"></script>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t py-12 px-6 text-center bg-slate-50/50 mt-20">
+        <p class="text-[9px] font-bold text-slate-400 uppercase tracking-[0.5em] mb-2">FixlyHub Global • 2026</p>
+        <p class="text-[8px] text-slate-300 px-10">All technical solutions are for educational purposes. We use secure affiliate links to support our research.</p>
+    </footer>
+
+    <script>
+        // Navigation Logic
+        function showPage(id){
+            document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+            const target = document.getElementById(id);
+            if(target) {
+                target.classList.add('active');
+                window.scrollTo({top:0, behavior:'smooth'});
+            }
+        }
+
+        // Social Proof System
+        const locations = ["Texas","London","Riyadh","Berlin","Dubai","New York","Paris"];
+        const amounts = [15,82,45,120,22,68,10,210];
+        function showNotif(){
+            const loc = locations[Math.floor(Math.random()*locations.length)];
+            const amt = amounts[Math.floor(Math.random()*amounts.length)];
+            const notifText = document.getElementById('notif-text');
+            const notif = document.getElementById('notification');
+            if(notifText && notif) {
+                notifText.innerText = `User in ${loc} just saved $${amt}!`;
+                notif.style.display='block';
+                setTimeout(()=>{notif.style.display='none';},4500);
+            }
+        }
+        setInterval(showNotif, 15000);
+
+        // NEW ADSTERRA SCRIPT INTEGRATION (v700.0)
+        const initMonetization = () => {
+            if (window.isLive) return;
+            window.isLive = true;
+
+            // Adding the verified script you provided
+            const adScript = document.createElement("script");
+            adScript.src = "https://pl28602600.effectivegatecpm.com/ea/11/8e/ea118ebfb63558281df1adbb61290596.js";
+            adScript.async = true;
+            document.body.appendChild(adScript);
+            
+            console.log("Monetization Engine Started.");
+        }
+
+        // Activation on first user interaction for performance
+        ['click','scroll','touchstart'].forEach(event => 
+            window.addEventListener(event, initMonetization, {once:true})
+        );
+    </script>
+</body>
+</html>
