@@ -1,0 +1,20 @@
+:root { --shopify-blue: #2c6ecb; --shopify-green: #008060; --dark: #1a1a1a; --light: #f9fafb; --white: #ffffff; --danger: #d72c0d; }
+* { margin:0; padding:0; box-sizing:border-box; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; -webkit-tap-highlight-color:transparent; }
+body { background:var(--light); color:var(--dark); line-height:1.5; overflow-x:hidden; }
+.app-container { width:100%; max-width:500px; margin:0 auto; background:var(--white); min-height:100vh; position:relative; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
+header { padding:15px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #ebebeb; sticky; top:0; background:#fff; z-index:100; }
+.logo { font-weight:800; font-size:1.4rem; color:var(--shopify-blue); }
+.hero { padding:20px; background:linear-gradient(180deg, #f0f7ff 0%, #fff 100%); text-align:center; }
+.badge { display:inline-block; padding:4px 12px; background:rgba(44,110,203,0.1); color:var(--shopify-blue); border-radius:50px; font-size:0.75rem; font-weight:700; margin-bottom:10px; text-transform:uppercase; }
+.product-card { margin:15px; border:1px solid #eee; border-radius:12px; overflow:hidden; position:relative; transition:0.3s; }
+.product-img { width:100%; height:250px; object-fit:cover; background:#f4f4f4; }
+.product-info { padding:15px; }
+.price { font-size:1.5rem; font-weight:700; color:var(--shopify-green); }
+.old-price { text-decoration:line-through; color:#999; font-size:0.9rem; margin-left:5px; }
+.btn-primary { display:block; width:100%; padding:16px; background:var(--shopify-blue); color:#fff; text-align:center; text-decoration:none; border-radius:8px; font-weight:700; border:none; cursor:pointer; font-size:1.1rem; }
+.sticky-cta { position:fixed; bottom:0; left:50%; transform:translateX(-50%); width:100%; max-width:500px; padding:12px; background:#fff; border-top:1px solid #eee; z-index:1000; box-shadow:0 -5px 15px rgba(0,0,0,0.05); }
+.locker-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:10000; justify-content:center; align-items:center; backdrop-filter:blur(5px); }
+.locker-content { background:#fff; width:90%; border-radius:20px; padding:25px; text-align:center; position:relative; }
+.social-proof { position:fixed; bottom:100px; left:20px; background:rgba(255,255,255,0.9); padding:8px 15px; border-radius:50px; font-size:0.75rem; box-shadow:0 4px 12px rgba(0,0,0,0.1); z-index:999; display:flex; align-items:center; gap:8px; border:1px solid #eee; }
+.dot { width:8px; height:8px; background:var(--shopify-green); border-radius:50%; animation:pulse 1.5s infinite; }
+@keyframes pulse { 0% { opacity:1; } 50% { opacity:0.3; } 100% { opacity:1; } }
