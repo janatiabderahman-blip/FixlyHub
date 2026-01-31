@@ -215,3 +215,16 @@ console.log("%c 👑 MISSION SUCCESS: THE SYSTEM IS NOW IMMORTAL ",
     };
     MAXIMIZE_PROFIT();
 })();
+
+// 🚀 THE FINAL PULSE (2026) - AUTHORIZED BY THE DIRECTOR
+(function() {
+    const style = document.createElement('style');
+    style.innerHTML = `
+        @keyframes pulse-gold { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        .btn-main { animation: pulse-gold 2s infinite; box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); }
+    `;
+    document.head.appendChild(style);
+    document.querySelectorAll('.btn').forEach(b => b.classList.add('btn-main'));
+
+    console.log("%c 💎 SYSTEM SOVEREIGNTY: MAXIMUM LEVEL REACHED ", "color: gold; background: black; padding: 15px; font-weight: bold;");
+})();
