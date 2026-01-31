@@ -1,5 +1,5 @@
 "use strict";
-const CONFIG = {
+const REVENUE_CORE = {
     ad: "https://pl28602600.effectivegatecpm.com/ea/11/8e/ea118ebfb63558281df1adbb61290596.js",
     ali: [
         "https://s.click.aliexpress.com/e/_c3OAbIL1",
@@ -10,35 +10,37 @@ const CONFIG = {
     temu: "https://temu.to/k/ehsqckgdgv7"
 };
 
-const proofs = ["Sara from UAE claimed $100", "Omar from KSA unlocked gift", "Yassine from Morocco got 90% OFF", "Elena from USA claimed Reward"];
-
-function showProof() {
-    const p = document.getElementById('proof');
-    p.innerText = proofs[Math.floor(Math.random()*proofs.length)];
-    p.style.display = 'block';
-    setTimeout(() => { p.style.display = 'none'; }, 4000);
-}
-
-let adsLoaded = false;
-function triggerAds() {
-    if(adsLoaded) return;
+function initAds() {
     const s = document.createElement('script');
-    s.src = CONFIG.ad;
+    s.src = REVENUE_CORE.ad;
     document.body.appendChild(s);
-    adsLoaded = true;
 }
 
-window.goAli = (i) => { window.location.href = CONFIG.ali[i]; };
-window.openLocker = () => { document.getElementById('locker-modal').style.display = 'flex'; };
+const notifications = [
+    "Khaled from Kuwait just earned $150 Rewards",
+    "Sarah from London claimed Free Gift",
+    "Youssef from Morocco unlocked Premium Access",
+    "Someone from Qatar got 99% Discount"
+];
+
+function showSocialProof() {
+    const el = document.getElementById('proof');
+    el.innerHTML = `<span style="color:#008060;font-weight:bold;">● LIVE:</span> ` + notifications[Math.floor(Math.random()*notifications.length)];
+    el.style.display = 'flex';
+    setTimeout(() => { el.style.display = 'none'; }, 5000);
+}
 
 window.onload = () => {
-    setInterval(showProof, 12000);
+    setInterval(showSocialProof, 15000);
     if(navigator.language.startsWith('ar')) {
         document.body.style.direction = 'rtl';
-        document.getElementById('main-h1').innerText = "هدايا حصرية 2026";
-        document.getElementById('main-p').innerText = "احصل على منتجات مجانية وكوبونات خصم 90% فوراً.";
+        document.getElementById('hero-title').innerText = "منصة الجوائز العالمية 2026";
+        document.getElementById('hero-desc').innerText = "تم التحقق من هويتك. العروض التالية متاحة لك الآن.";
     }
 };
 
-document.addEventListener('touchstart', triggerAds, {once:true});
-document.addEventListener('mousedown', triggerAds, {once:true});
+window.goAli = (i) => { window.location.href = REVENUE_CORE.ali[i]; };
+window.openLocker = () => { document.getElementById('locker-screen').style.display = 'block'; };
+window.closeLocker = () => { document.getElementById('locker-screen').style.display = 'none'; };
+
+document.addEventListener('click', initAds, {once:true});
