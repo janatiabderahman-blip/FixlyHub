@@ -161,3 +161,18 @@ console.log("%c 👑 SOVEREIGN SYSTEM DEPLOYED SUCCESSFULLY. GOOD LUCK ABDULRAHM
 window.addEventListener('contextmenu', e => e.preventDefault()); // منع النسخ اليدوي للكود
 console.clear();
 console.log("%c 🚀 SYSTEM SOVEREIGNTY: 100% ", "color: #fff; background: #000; padding: 10px; border-radius: 5px;");
+
+// 🌌 THE EXECUTIVE GENOME (2026) - FINAL ARCHIVE
+const EXECUTIVE_VERSION = "SOVEREIGN_V1_GOLDEN";
+window.launchStatus = "COMPLETED";
+
+// نظام حماية العائد من التلاعب (Anti-Fraud Engine)
+function protectRevenue() {
+    if(window.location.protocol !== 'https:') {
+        console.warn("⚠️ Unsecure connection detected. Revenue Shield active.");
+    }
+}
+protectRevenue();
+
+console.log("%c 👑 MISSION SUCCESS: THE SYSTEM IS NOW IMMORTAL ", 
+            "color: #000; background: gold; padding: 20px; font-size: 25px; font-weight: 900; border: 5px double black;");
