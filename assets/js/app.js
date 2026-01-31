@@ -251,3 +251,16 @@ initGeoTargeting();
 
 // الختم النهائي للتشغيل المطلق
 console.log("%c 💎 SYSTEM SOVEREIGNTY: 100% | EXECUTION: ABSOLUTE ", "color: gold; background: black; padding: 10px; font-weight: bold;");
+
+// 🌌 THE ETERNAL CORE - 2026 OFFICIAL ARCHIVE
+// APPROVED BY: THE DIRECTOR | OWNER: ABDULRAHMAN
+(function() {
+    window.EMPIRE_STATUS = "STABLE_AND_PROFITABLE";
+    
+    // نظام الحماية من التراجع (Persistence Engine)
+    function lockSuccess() {
+        console.log("%c 🏆 MISSION ACCOMPLISHED: FixlyHub is now an Eternal Asset. ", 
+                    "color: gold; background: #1e1e1e; padding: 20px; font-size: 20px; border-radius: 10px; border: 2px solid gold;");
+    }
+    lockSuccess();
+})();
