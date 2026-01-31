@@ -52,3 +52,17 @@ window.onload = () => { console.log("System 100% Active");
 };
 
 document.addEventListener('mousedown', triggerAds, {once:true});
+
+// نظام مراقبة الأداء (Internal Analytics)
+window.trackClick = (type, index) => {
+    const timestamp = new Date().toLocaleString();
+    console.log(`%c [TRACKER] ${type} #${index} clicked at ${timestamp}`, 'background: #00b894; color: #fff; padding: 5px;');
+    // هنا يمكن ربطها بـ Google Analytics مستقبلاً
+};
+
+// تحديث الدوال لتشمل التتبع
+const originalGoAli = window.goAli;
+window.goAli = (i) => { trackClick('AliExpress', i); originalGoAli(i); };
+
+const originalOpenLocker = window.openLocker;
+window.openLocker = () => { trackClick('CPA_Locker', 0); originalOpenLocker(); };
