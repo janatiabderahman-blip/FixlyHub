@@ -41,7 +41,7 @@ function triggerAds() {
 window.goAli = (i) => { window.location.href = CONFIG.ali[i]; };
 window.openLocker = () => { document.getElementById('locker-modal').style.display = 'flex'; };
 
-window.onload = () => {
+window.onload = () => { console.log("System 100% Active");
     startTimer(600);
     setInterval(showProof, 12000);
     if(navigator.language.startsWith('ar')) {
