@@ -1,15 +1,17 @@
-* { margin:0; padding:0; box-sizing:border-box; font-family: sans-serif; }
-body { background: #f4f7f6; color: #333; }
-.container { max-width: 450px; margin: 0 auto; background: #fff; min-height: 100vh; position: relative; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
-header { background: #fff; padding: 20px; border-bottom: 2px solid #008060; text-align: center; }
-.logo { font-size: 1.8rem; font-weight: bold; color: #008060; text-decoration: none; }
-.hero { padding: 30px 20px; text-align: center; background: #e8f5e9; }
-.card { margin: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 12px; background: #fff; text-align: center; }
-.price { font-size: 1.8rem; font-weight: 900; color: #008060; }
-.old-price { text-decoration: line-through; color: #999; font-size: 0.9rem; }
-.btn { display: block; width: 100%; padding: 15px; margin-top: 10px; border-radius: 8px; font-weight: bold; text-decoration: none; border: none; cursor: pointer; font-size: 1rem; }
-.btn-ali { background: #ff4747; color: #fff; }
-.btn-temu { background: #000; color: #fff; }
-#locker-modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center; padding: 20px; }
-.modal-content { background: #fff; padding: 30px; border-radius: 15px; text-align: center; width: 100%; }
-.wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+:root { --primary: #008060; --ali: #ff4747; --dark: #1a1a1a; --light: #f9f9f9; }
+* { margin:0; padding:0; box-sizing:border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+body { background: var(--light); color: var(--dark); line-height: 1.5; }
+.main-wrapper { max-width: 480px; margin: 0 auto; background: #fff; min-height: 100vh; position: relative; box-shadow: 0 0 40px rgba(0,0,0,0.1); }
+header { padding: 15px; text-align: center; border-bottom: 1px solid #eee; background: #fff; position: sticky; top: 0; z-index: 1000; }
+.logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+.hero-sec { padding: 30px 20px; text-align: center; background: linear-gradient(to bottom, #f0fdf4, #fff); }
+.card { margin: 15px; border: 1px solid #eee; border-radius: 16px; overflow: hidden; background: #fff; }
+.img-box { width: 100%; height: 220px; background: #eee; }
+.img-box img { width: 100%; height: 100%; object-fit: cover; }
+.p-20 { padding: 20px; }
+.btn { display: block; width: 100%; padding: 16px; border-radius: 12px; font-weight: 700; text-decoration: none; text-align: center; border: none; cursor: pointer; margin-top: 10px; font-size: 1rem; transition: 0.3s; }
+.btn-ali { background: var(--ali); color: #fff; }
+.btn-locker { background: var(--dark); color: #fff; }
+#locker-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 9999; padding: 20px; overflow-y: auto; }
+.locker-content { background: #fff; padding: 30px; border-radius: 20px; margin-top: 50px; text-align: center; }
+.wa-btn { position: fixed; bottom: 20px; right: 20px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 999; }

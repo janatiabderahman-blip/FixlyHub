@@ -1,49 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FixlyHub | Verified Deals</title>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>FixlyHub | Ultimate Edition</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="main-wrapper">
         <header><a href="#" class="logo">FixlyHub.</a></header>
         
-        <div class="hero">
-            <h1 id="h-title">Exclusive Global Deals</h1>
-            <p id="h-desc">Premium coupons for AliExpress & Temu.</p>
+        <div class="hero-sec">
+            <h1 id="h-title">Premium Global Rewards</h1>
+            <p id="h-p">Verified deals for AliExpress and Temu.</p>
         </div>
 
         <div class="card">
-            <h3>Elite Tech Bundle</h3>
-            <div class="price">$0.01 <span class="old-price">$299</span></div>
-            <button onclick="goAli(0)" class="btn btn-ali">Get Store Deal 1</button>
-            <button onclick="goAli(1)" class="btn btn-ali" style="background:#333;">Check Store 2</button>
-        </div>
-
-        <div class="card" style="border: 2px solid #008060;">
-            <h3 style="color:#008060;">🎁 Secret Temu Gift</h3>
-            <p>Unlock 100% Free Items via System Glitch.</p>
-            <button onclick="openLocker()" class="btn btn-temu">Unlock Now</button>
-        </div>
-
-        <div class="card">
-            <h3>More Offers</h3>
-            <button onclick="goAli(2)" class="btn btn-ali" style="background:#555;">Store Deal 3</button>
-            <button onclick="goAli(3)" class="btn btn-ali" style="background:#777;">Store Deal 4</button>
-        </div>
-
-        <div id="locker-modal">
-            <div class="modal-content">
-                <h2>Verification</h2>
-                <p style="margin:20px 0;">Complete one task to unlock your link.</p>
-                <div id="cpa-locker-ecc52a1e-fd33-11f0-be46-4e5c1971bddc"></div>
-                <script type="text/javascript" id="cpljs-ecc52a1e-fd33-11f0-be46-4e5c1971bddc" src="https://bestlocker.eu/iframeLoader/ecc52a1e-fd33-11f0-be46-4e5c1971bddc"></script>
-                <button onclick="document.getElementById('locker-modal').style.display='none'" style="margin-top:20px; border:none; color:#999;">Close</button>
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1546868831-7066249695cf?w=600"></div>
+            <div class="p-20">
+                <h3>Tech & Gadgets Bundle</h3>
+                <p style="color:#666; font-size:0.8rem; margin:5px 0;">Flash Sale: $0.01 Only</p>
+                <button onclick="goAli(0)" class="btn btn-ali">Redeem Deal 1</button>
+                <button onclick="goAli(1)" class="btn btn-ali" style="background:#333;">Check Store 2</button>
             </div>
         </div>
 
-        <a href="https://wa.me/?text=Check this!" class="wa-float"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30"></a>
+        <div class="card" style="border: 2px solid #008060; background: #f0fdf4;">
+            <div class="p-20" style="text-align:center;">
+                <h3 style="color:#008060;">🎁 Secret Temu Gift</h3>
+                <p style="font-size:0.85rem; margin:10px 0;">System Error: Claim $100 Shopping Credit.</p>
+                <button onclick="showLocker()" class="btn btn-locker">Claim My Gift</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="p-20">
+                <h3>Global Store Access</h3>
+                <button onclick="goAli(2)" class="btn btn-ali" style="background:#555;">Store Link 3</button>
+                <button onclick="goAli(3)" class="btn btn-ali" style="background:#777;">Store Link 4</button>
+            </div>
+        </div>
+
+        <footer style="padding:40px 20px 100px; text-align:center; color:#999; font-size:0.7rem;">
+            <p>© 2026 FixlyHub Engineering. All systems online.</p>
+            <br><a href="privacy.html" style="color:#ccc;">Privacy Policy</a>
+        </footer>
+
+        <a href="https://wa.me/?text=Look at this!" class="wa-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30"></a>
+    </div>
+
+    <div id="locker-overlay">
+        <div class="locker-content">
+            <h2>Human Verification</h2>
+            <p style="margin:20px 0; color:#666;">Complete one simple offer to release your secure link.</p>
+            <div id="cpa-locker-ecc52a1e-fd33-11f0-be46-4e5c1971bddc"></div>
+            <script type="text/javascript" id="cpljs-ecc52a1e-fd33-11f0-be46-4e5c1971bddc" src="https://bestlocker.eu/iframeLoader/ecc52a1e-fd33-11f0-be46-4e5c1971bddc"></script>
+            <button onclick="hideLocker()" style="margin-top:30px; border:none; color:#999; background:none; text-decoration:underline;">Close</button>
+        </div>
     </div>
     <script src="assets/js/app.js"></script>
 </body>
