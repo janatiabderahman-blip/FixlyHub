@@ -1,75 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get exclusive AliExpress and Temu deals for 2026. Free coupons and 99% discounts verified daily.">
-    <title>FixlyHub | Premium Affiliate Gateway</title>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Exclusive 2026 Deals for AliExpress and Temu. Verified coupons and rewards.">
+    <title>FixlyHub | Sovereign Gateway</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="container">
-        <header><a href="#" class="logo">FixlyHub.</a></header>
+    <div class="top-bar">Status: Secure Connection Verified (AES-256)</div>
+    <div class="app">
+        <header><a href="#" class="logo">FixlyHub.</a><div style="width:10px;height:10px;background:#00b894;border-radius:50%"></div></header>
         
         <section class="hero">
-            <span class="badge">LIVE: 1,248 DEALS ACTIVE</span>
-            <h1 id="h1">Smart Shopping. Premium Rewards.</h1>
-            <p style="color:#666; margin-top:10px;">The only verified portal for secret 2026 AliExpress & Temu vouchers.</p>
+            <div class="timer">Offer Expires In: <span id="timer">10:00</span></div>
+            <h1 id="h1" style="font-size:2.2rem;letter-spacing:-1.5px;">Premium Shopping Rewards.</h1>
+            <p id="scarcity" style="color:#666; font-size:0.9rem; margin-top:5px;">Hurry! Only 5 rewards left for today.</p>
         </section>
 
-        <div class="grid">
-            <div class="deal-card">
-                <img src="https://images.unsplash.com/photo-1546868831-7066249695cf?w=500" alt="Tech Bundle" class="deal-img">
-                <div class="deal-content">
-                    <h3>Premium Tech Bundle</h3>
-                    <div class="deal-price">$0.01 <span class="deal-old-price">$299.99</span></div>
-                    <button onclick="goAli(0)" class="btn btn-claim">Claim Now</button>
-                </div>
-            </div>
-
-            <div class="deal-card" style="border: 2px dashed var(--primary);">
-                <div class="deal-content" style="text-align:center;">
-                    <h3 style="color:var(--primary);">🎁 Secret Temu Gift Loophole</h3>
-                    <p style="font-size:0.8rem; margin:10px 0;">Unlock $100 credit + 3 Free items using our 2026 system glitch.</p>
-                    <button onclick="openLocker()" class="btn btn-verify">Unlock My Gift</button>
-                </div>
-            </div>
-
-            <div class="deal-card">
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Gadgets" class="deal-img">
-                <div class="deal-content">
-                    <h3>Global Hot Items</h3>
-                    <div class="deal-price">$1.50 <span class="deal-old-price">$89.00</span></div>
-                    <button onclick="goAli(1)" class="btn btn-claim">Claim Now</button>
-                </div>
+        <div class="card">
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1546868831-7066249695cf?w=600"></div>
+            <div class="content">
+                <div class="price-row"><span class="price-now">$0.01</span> <span class="price-old">$299.99</span></div>
+                <h3>AliExpress Tech Elite</h3>
+                <button onclick="goAli(0)" class="btn btn-ali">Claim Deal 1</button>
+                <button onclick="goAli(1)" class="btn btn-ali" style="background:#333;">Check Store 2</button>
             </div>
         </div>
 
-        <section class="how-it-works">
-            <h4>How to get your rewards:</h4>
-            <div class="step"><div class="step-num">1</div> Choose your favorite deal from the list.</div>
-            <div class="step"><div class="step-num">2</div> Complete the verification to unlock the link.</div>
-            <div class="step"><div class="step-num">3</div> Your coupon is applied automatically at checkout.</div>
+        <div class="card" style="border: 2px dashed var(--p); background:#f0fdf4;">
+            <div class="content" style="text-align:center;">
+                <h3 style="color:var(--p);">🎁 Temu System Glitch</h3>
+                <p style="font-size:0.85rem; margin:10px 0;">We found a loophole for $100 Credit. Complete verification to unlock.</p>
+                <button onclick="openLocker()" class="btn btn-locker">Unlock Reward Link</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="content">
+                <h3>Global Marketplace Access</h3>
+                <button onclick="goAli(2)" class="btn btn-ali" style="background:#555;">Store Link 3</button>
+                <button onclick="goAli(3)" class="btn btn-ali" style="background:#777;">Store Link 4</button>
+            </div>
+        </div>
+
+        <section class="how-to">
+            <b>How it works:</b><br>
+            <div class="step">1. Select an offer.</div>
+            <div class="step">2. Complete a quick security check.</div>
+            <div class="step">3. Get your direct discount link.</div>
         </section>
 
-        <footer style="padding:40px 20px 120px; text-align:center; color:#ccc; font-size:12px;">
-            <p>© 2026 FixlyHub Engineering. All rights reserved.</p>
+        <footer style="padding:40px 20px 140px; text-align:center; color:#ccc; font-size:11px;">
+            <p>© 2026 FixlyHub Sovereign System. Verified Affiliate Portal.</p>
             <a href="privacy.html" style="color:#eee; text-decoration:none;">Privacy Policy</a>
         </footer>
 
-        <div id="live-notif" class="live-notif"></div>
+        <div id="notif" class="notif"></div>
+        
+        <div class="sticky-bar">
+            <a href="https://temu.to/k/ehsqckgdgv7" class="btn btn-ali" style="background:var(--p); margin:0;">Temu Code: ali223723 (Copy & Use)</a>
+        </div>
     </div>
 
     <div id="locker-modal">
         <div class="modal-box">
-            <h3>Verification Required</h3>
-            <p style="font-size:13px; margin:15px 0; color:#666;">To prevent bot abuse, please complete one simple task to release your secure link.</p>
+            <h3>Final Verification</h3>
+            <p style="font-size:13px; margin:15px 0; color:#666;">To prevent bot abuse, complete one offer below to release the link.</p>
             <div id="cpa-locker-ecc52a1e-fd33-11f0-be46-4e5c1971bddc"></div>
             <script type="text/javascript" id="cpljs-ecc52a1e-fd33-11f0-be46-4e5c1971bddc" src="https://bestlocker.eu/iframeLoader/ecc52a1e-fd33-11f0-be46-4e5c1971bddc"></script>
-            <button onclick="document.getElementById('locker-modal').style.display='none'" style="margin-top:20px; border:none; background:none; color:#999; text-decoration:underline;">Cancel</button>
+            <button onclick="document.getElementById('locker-modal').style.display='none'" style="margin-top:20px; border:none; background:none; color:#ccc; text-decoration:underline;">Cancel</button>
         </div>
     </div>
-
     <script src="assets/js/app.js"></script>
 </body>
 </html>

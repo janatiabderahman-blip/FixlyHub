@@ -1,4 +1,5 @@
-const SITE_CONFIG = {
+"use strict";
+const CONFIG = {
     ad: "https://pl28602600.effectivegatecpm.com/ea/11/8e/ea118ebfb63558281df1adbb61290596.js",
     ali: [
         "https://s.click.aliexpress.com/e/_c3OAbIL1",
@@ -9,26 +10,45 @@ const SITE_CONFIG = {
     temu: "https://temu.to/k/ehsqckgdgv7"
 };
 
-function loadAds() {
-    const s = document.createElement('script');
-    s.src = SITE_CONFIG.ad;
-    document.body.appendChild(s);
+const proofs = ["Sarah from UAE claimed $100", "Ahmed from KSA got Free Gift", "Omar from Kuwait unlocked Deal"];
+
+function startTimer(duration) {
+    let timer = duration, min, sec;
+    const el = document.getElementById('timer');
+    setInterval(() => {
+        min = parseInt(timer / 60, 10);
+        sec = parseInt(timer % 60, 10);
+        el.textContent = (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0" + sec : sec);
+        if (--timer < 0) timer = duration;
+    }, 1000);
 }
 
-window.goAli = (i) => { window.location.href = SITE_CONFIG.ali[i]; };
+function showProof() {
+    const el = document.getElementById('notif');
+    el.innerHTML = `<b>● LIVE:</b> ${proofs[Math.floor(Math.random()*proofs.length)]}`;
+    el.style.display = 'flex';
+    setTimeout(() => { el.style.display = 'none'; }, 4000);
+}
+
+let adsLoaded = false;
+function triggerAds() {
+    if(adsLoaded) return;
+    const s = document.createElement('script'); s.src = CONFIG.ad;
+    document.body.appendChild(s);
+    adsLoaded = true;
+}
+
+window.goAli = (i) => { window.location.href = CONFIG.ali[i]; };
 window.openLocker = () => { document.getElementById('locker-modal').style.display = 'flex'; };
 
 window.onload = () => {
+    startTimer(600);
+    setInterval(showProof, 12000);
     if(navigator.language.startsWith('ar')) {
         document.body.style.direction = 'rtl';
+        document.getElementById('h1').innerText = "عروض حصرية 2026";
+        document.getElementById('scarcity').innerText = "عجل! بقي 5 قسائم فقط لليوم.";
     }
-    // إظهار إشعارات وهمية لزيادة الثقة
-    setInterval(() => {
-        const notif = document.getElementById('live-notif');
-        notif.innerText = "شخص ما حصل للتو على قسيمة $100";
-        notif.style.display = 'block';
-        setTimeout(() => { notif.style.display = 'none'; }, 3000);
-    }, 15000);
 };
 
-document.addEventListener('mousedown', loadAds, {once:true});
+document.addEventListener('mousedown', triggerAds, {once:true});
