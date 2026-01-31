@@ -1,251 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FixlyHub AI | Smart Shopping & Deals</title>
-
-  <!-- SEO -->
-  <meta name="description" content="FixlyHub AI: Temu rewards, Amazon deals, coupons, smart shopping tools, AI guidance." />
-  <meta name="keywords" content="Temu, Amazon, coupons, deals, smart shopping, AI playbooks, affiliate" />
+  <title>FixlyHub — الصفقات، المراجعات والتسوق الذكي</title>
+  <meta name="description" content="FixlyHub: أفضل الصفقات، مقارنة الأسعار، ودلائل الربح بالعمولة لـ Temu وAliExpress والمزيد. ابدأ بالربح مع أدواتنا ودلائلنا." />
+  <meta name="keywords" content="deals, price comparison, AliExpress, Temu, coupons, affiliate, reviews, كوبون" />
   <meta name="robots" content="index,follow" />
-  <meta name="theme-color" content="#2563eb" />
-
-  <!-- Tailwind CSS & Icons -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta property="og:title" content="FixlyHub — Deals, Reviews & Smart Shopping" />
+  <meta property="og:description" content="Find the best deals, compare prices and learn how to earn with affiliate programs." />
+  <meta property="og:image" content="https://images.pexels.com/photos/4968391/pexels-photo-4968391.jpeg" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
-
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { font-family: system-ui, sans-serif; background: #f8fafc; color: #0f172a; }
-    .page { display: none; }
-    .page.active { display: block; animation: fadeIn 0.35s ease-out; }
-    @keyframes fadeIn { from {opacity:0; transform:translateY(6px);} to {opacity:1; transform:translateY(0);} }
-    .glass { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-bottom:1px solid rgba(148,163,184,0.3);}
-    .card { background:#fff; border-radius:24px; border:1px solid #e2e8f0; transition:0.25s;}
-    .card:hover { transform: translateY(-3px); box-shadow: 0 18px 35px rgba(15,23,42,0.08);}
-    .tag { font-size:10px; letter-spacing:0.12em; text-transform:uppercase; }
-    .hero-img img { width:100%; height:auto; border-radius:24px; overflow:hidden; border:1px solid #e2e8f0; }
-    .tool-input { border-radius:14px; border:1px solid #e2e8f0; padding:0.9rem 1rem; width:100%; font-size:0.95rem; outline:none;}
-    .tool-input:focus { border-color:#2563eb; box-shadow:0 0 0 1px rgba(37,99,235,0.2);}
+    body{font-family:system-ui,Arial,Helvetica,sans-serif;background:#f8fafc;color:#0f172a;direction:rtl}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    .card{background:#fff;border-radius:12px;padding:18px;border:1px solid #e6edf3}
+    .tag{font-size:11px;color:#2563eb;font-weight:700}
+    .hero{display:flex;gap:24px;align-items:center}
+    .hero img{width:100%;border-radius:12px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .btn{background:#2563eb;color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none}
+    .affiliate-disclosure{font-size:12px;color:#6b7280;background:#fffbe6;padding:10px;border-radius:8px;border:1px solid #ffedd5;margin-bottom:12px}
+    .cookie-banner{position:fixed;bottom:18px;left:18px;right:18px;background:#111827;color:#fff;padding:12px;border-radius:8px;display:flex;justify-content:space-between;align-items:center;gap:12px;z-index:9999}
+    @media (max-width:900px){ .hero{flex-direction:column} }
   </style>
 </head>
 <body>
-
-<!-- NAVBAR -->
-<nav class="sticky top-0 z-[1000] glass px-4 sm:px-6 py-3 flex justify-between items-center">
-  <div class="flex items-center space-x-3 cursor-pointer" onclick="showPage('home')">
-    <div class="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg">
-      <i class="fas fa-brain text-sm"></i>
-    </div>
-    <span class="text-lg sm:text-xl font-black tracking-tight uppercase">FIXLY<span class="text-blue-600">HUB</span></span>
-  </div>
-  <div class="flex items-center space-x-2">
-    <button onclick="showPage('tools')" class="hidden sm:inline-flex text-[11px] font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full hover:bg-blue-100">Tools & Calculators</button>
-    <div class="text-[9px] sm:text-[10px] font-black text-green-600 bg-green-50 px-3 py-1 rounded-full uppercase">AI Engine Online</div>
-  </div>
-</nav>
-
-<main class="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-10 min-h-screen">
-
-<!-- HOME PAGE -->
-<section id="home" class="page active">
-
-  <div class="grid md:grid-cols-2 gap-8 items-center mb-10">
-    <div>
-      <h1 class="text-3xl sm:text-4xl font-black text-slate-900 mb-4 leading-tight">
-        Global AI Hub for <span class="text-blue-600">Deals, Rewards & Smart Shopping</span>
-      </h1>
-      <p class="text-sm sm:text-base text-slate-500 mb-4">
-        Navigate Temu rewards, Amazon deals, and smart shopping tools with structured guidance. No hype, only real info.
-      </p>
-      <ul class="text-sm text-slate-600 space-y-1 mb-5">
-        <li>• Understand how reward campaigns and deals work.</li>
-        <li>• Use calculators to see real value before buying.</li>
-        <li>• Discover curated Temu & Amazon offers.</li>
-      </ul>
-      <div class="flex flex-wrap gap-3">
-        <button onclick="scrollToAI()" class="px-4 py-2 rounded-full bg-blue-600 text-white text-xs sm:text-sm font-semibold hover:bg-blue-700">Ask FixlyHub AI</button>
-        <button onclick="showPage('tools')" class="px-4 py-2 rounded-full border border-slate-300 text-xs sm:text-sm font-semibold hover:bg-slate-50">Explore Tools & Calculators</button>
+  <header class="container">
+    <nav style="display:flex;justify-content:space-between;align-items:center;">
+      <div style="display:flex;gap:12px;align-items:center">
+        <h1 style="margin:0;font-weight:900">FIXLY<span style="color:#2563eb">HUB</span></h1>
+        <span style="font-size:12px;color:#6b7280">الصفقات • المراجعات • الربح</span>
       </div>
-    </div>
-    <div class="hero-img hidden md:block">
-      <img src="https://images.pexels.com/photos/4968391/pexels-photo-4968391.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Online shopping and digital tools"/>
-    </div>
-  </div>
-
-  <!-- AI QUERY SECTION -->
-  <section id="ai-section" class="mb-10">
-    <h2 class="text-xs font-black text-slate-400 uppercase tracking-[0.22em] mb-3">AI-Guided Suggestions</h2>
-    <div class="card p-4 sm:p-6">
-      <p class="text-xs text-slate-500 mb-3">Ask about Temu rewards, Amazon deals, or general shopping strategies. You’ll get structured, neutral guidance.</p>
-      <div class="relative max-w-xl">
-        <input type="text" id="ai-query" placeholder="Example: 'How do Temu rewards work?'" class="tool-input pr-28" />
-        <button onclick="runAI()" class="absolute right-1.5 top-1.5 bottom-1.5 px-4 sm:px-5 bg-blue-600 text-white rounded-xl font-bold text-xs sm:text-sm hover:bg-blue-700">Get Insight</button>
+      <div style="display:flex;gap:10px;align-items:center">
+        <a href="/" style="color:#2563eb;text-decoration:none;font-weight:700">الرئيسية</a>
+        <a href="/articles/ar" style="color:#2563eb;text-decoration:none;font-weight:700">المقالات</a>
       </div>
-    </div>
-  </section>
+    </nav>
+  </header>
 
-  <!-- ADSTERRA -->
-  <section class="mb-10">
-    <p class="text-[11px] text-slate-400 mb-1">Sponsored Tools & Ads:</p>
-    <div class="bg-slate-100 rounded-2xl p-3 sm:p-4 border-2 border-dashed border-slate-200 min-h-[90px] flex items-center justify-center overflow-hidden relative">
-      <span class="absolute top-2 left-3 text-[10px] text-slate-400">Sponsored</span>
-      <script src="https://pl28602600.effectivegatecpm.com/ea/11/8e/ea118ebfb63558281df1adbb61290596.js"></script>
-    </div>
-  </section>
+  <main class="container">
 
-  <!-- FEATURED PLAYBOOKS -->
-  <section class="mb-10">
-    <h2 class="text-xs font-black text-slate-400 uppercase tracking-[0.22em] mb-3">Popular AI Playbooks</h2>
-    <div id="vault-grid" class="grid gap-4 sm:grid-cols-3"></div>
-  </section>
+    <div class="affiliate-disclosure">إفصاح: بعض الروابط في هذا الموقع روابط تابعة وقد نحصل على عمولة عند الشراء دون أي تكلفة إضافية عليك. نوصي بالمنتجات التي نثق بها فقط.</div>
 
-  <!-- PRODUCTS / DEALS -->
-  <section class="grid md:grid-cols-3 gap-5 mb-10">
-
-    <div class="card p-4 sm:p-5 flex flex-col">
-      <span class="tag text-blue-500 mb-2">Temu Rewards</span>
-      <h3 class="font-bold text-sm sm:text-base mb-2">Understanding Temu Reward Campaigns</h3>
-      <p class="text-xs sm:text-sm text-slate-600 mb-3">
-        Temu runs reward bundles and referral campaigns with conditions. Treat rewards as bonuses, not guaranteed income.
-      </p>
-      <button onclick="openAffiliate('temuBundle')" class="mt-auto text-xs sm:text-sm font-semibold text-white bg-orange-500 hover:bg-orange-600 px-3 py-2 rounded-full">Explore Temu Offers</button>
-    </div>
-
-    <div class="card p-4 sm:p-5 flex flex-col">
-      <span class="tag text-emerald-500 mb-2">Amazon Deals</span>
-      <h3 class="font-bold text-sm sm:text-base mb-2">Evaluating Amazon Deals Like a Pro</h3>
-      <p class="text-xs sm:text-sm text-slate-600 mb-3">
-        Compare prices, read reviews, and look at product value. Focus on deals that truly save money.
-      </p>
-      <button onclick="openAffiliate('amazonDeals')" class="mt-auto text-xs sm:text-sm font-semibold text-white bg-amber-500 hover:bg-amber-600 px-3 py-2 rounded-full">View Curated Amazon Deals</button>
-    </div>
-
-    <div class="card p-4 sm:p-5 flex flex-col">
-      <span class="tag text-indigo-500 mb-2">Smart Shopping</span>
-      <h3 class="font-bold text-sm sm:text-base mb-2">Tools That Make You a Smarter Buyer</h3>
-      <p class="text-xs sm:text-sm text-slate-600 mb-3">
-        Discount calculators, currency converters, and budget planners show real purchase impact.
-      </p>
-      <button onclick="showPage('tools')" class="mt-auto text-xs sm:text-sm font-semibold text-blue-600 bg-blue-50 hover:bg-blue-100 px-3 py-2 rounded-full">Open Tools & Calculators</button>
-    </div>
-
-  </section>
-
-  <!-- MyLead CPA Locker -->
-  <section class="mb-10">
-    <h2 class="text-xs font-black text-slate-400 uppercase tracking-[0.22em] mb-3">Special Offers (MyLead)</h2>
-    <div id="cpa-locker-ecc52a1e-fd33-11f0-be46-4e5c1971bddc"></div>
-    <script type="text/javascript" id="cpljs-ecc52a1e-fd33-11f0-be46-4e5c1971bddc" src="https://bestlocker.eu/iframeLoader/ecc52a1e-fd33-11f0-be46-4e5c1971bddc"></script>
-  </section>
-
-</section>
-
-<!-- TOOLS PAGE -->
-<section id="tools" class="page">
-  <button onclick="showPage('home')" class="text-blue-600 font-bold text-[11px] mb-6 uppercase flex items-center gap-1"><i class="fas fa-arrow-left text-[10px]"></i> Back</button>
-  <h2 class="text-xl sm:text-2xl font-black mb-4">Tools & Calculators</h2>
-  <p class="text-sm text-slate-600 mb-6">Use these tools to understand the real value of deals before buying.</p>
-
-  <div class="grid md:grid-cols-2 gap-6 mb-10">
-
-    <!-- Discount Calculator -->
-    <div class="card p-5">
-      <span class="tag text-emerald-500 mb-2 block">Discount Tool</span>
-      <h3 class="font-bold mb-2">Smart Discount Calculator</h3>
-      <p class="text-xs text-slate-600 mb-3">Calculate final price after discounts.</p>
-      <div class="space-y-2 mb-3">
-        <input type="number" id="dc-price" class="tool-input" placeholder="Original price (e.g. 79.99)"/>
-        <input type="number" id="dc-discount" class="tool-input" placeholder="Discount % (e.g. 25)"/>
+    <section class="card hero" style="padding:24px">
+      <div style="flex:1">
+        <h2 style="margin:0 0 8px 0;font-size:28px">اكتشف أفضل الصفقات وتعلم كيف تربح</h2>
+        <p style="color:#6b7280">مقارنات الأسعار، مراجعات عملية، وأدوات بسيطة لمساعدتك على التوفير والربح ببرامج العمولة.</p>
+        <div style="display:flex;gap:10px;margin-top:12px">
+          <a class="btn" href="#featured">استعرض الصفقات</a>
+          <a class="btn" href="/articles/ar/beginners-guide-to-temu-rewards.html" style="background:#10b981">ابدأ الربح</a>
+        </div>
       </div>
-      <button onclick="runDiscountCalc()" class="w-full bg-blue-600 text-white rounded-xl py-2.5 text-sm font-semibold hover:bg-blue-700">Calculate</button>
-      <div id="dc-result" class="mt-3 text-lg font-bold text-emerald-500 min-h-[28px]"></div>
-    </div>
+      <div style="width:420px"><img src="https://images.pexels.com/photos/4968391/pexels-photo-4968391.jpeg" alt="shopping"/></div>
+    </section>
 
-    <!-- Budget Guardrail -->
-    <div class="card p-5">
-      <span class="tag text-indigo-500 mb-2 block">Budget Helper</span>
-      <h3 class="font-bold mb-2">Monthly Shopping Guardrail</h3>
-      <p class="text-xs text-slate-600 mb-3">Estimate safe monthly shopping budget.</p>
-      <div class="space-y-2 mb-3">
-        <input type="number" id="bg-income" class="tool-input" placeholder="Approximate monthly income"/>
+    <section id="featured" style="margin-top:20px">
+      <h3 style="margin-bottom:8px">أدلة وصفقات مميزة</h3>
+      <div class="grid">
+        <article class="card">
+          <div class="tag">دليل</div>
+          <h4>دليل المبتدئين لربح من Temu</h4>
+          <p style="color:#6b7280">خطوات عملية للبدء في الاستفادة من عروض Temu وبرامج الإحالة.</p>
+          <a class="btn" href="/articles/ar/beginners-guide-to-temu-rewards.html" style="margin-top:10px;display:inline-block">اقرأ الدليل</a>
+        </article>
+
+        <article class="card">
+          <div class="tag">صفقة</div>
+          <h4>أفضل صفقات AliExpress هذا الشهر</h4>
+          <p style="color:#6b7280">منتجات مختارة بأفضل قيمة مقابل السعر.</p>
+          <button class="btn" onclick="openAffiliate('aliexpress')" style="margin-top:10px;display:inline-block">عرض الصفقات</button>
+        </article>
+
+        <article class="card">
+          <div class="tag">أداة</div>
+          <h4>حاسبة الخصم الذكية</h4>
+          <p style="color:#6b7280">احسب السعر النهائي بعد الكوبونات والشحن.</p>
+          <a class="btn" href="/tools.html" style="margin-top:10px;display:inline-block">افتح الأداة</a>
+        </article>
+
       </div>
-      <button onclick="runBudgetGuardrail()" class="w-full bg-slate-900 text-white rounded-xl py-2.5 text-sm font-semibold hover:bg-slate-800">Estimate</button>
-      <div id="bg-result" class="mt-3 text-sm font-semibold text-slate-700 min-h-[28px]"></div>
-    </div>
+    </section>
 
-  </div>
-</section>
+    <!-- Sponsored Ads (loads after cookie consent or user click) -->
+    <section style="margin-top:18px">
+      <h3 class="card" style="padding:12px;margin-bottom:8px">أدوات مدعومة وإعلانات</h3>
+      <div class="card" style="padding:12px;min-height:110px;display:flex;align-items:center;justify-content:center;position:relative">
+        <div id="ad-slot-effectivegatecpm" style="width:100%"></div>
+      </div>
+    </section>
 
-<!-- FOOTER -->
-<footer class="border-t bg-white pt-10 pb-6 px-4 sm:px-6 mt-12">
-  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 mb-8">
-    <div>
-      <h4 class="font-black text-[11px] text-slate-400 uppercase tracking-[0.22em] mb-3">FixlyHub Intelligence</h4>
-      <p class="text-sm text-slate-500">AI-assisted hub for Temu rewards, Amazon deals, and smart shopping. Informational only.</p>
-    </div>
-  </div>
-  <p class="text-center text-[9px] font-black text-slate-300 uppercase tracking-[0.4em]">FixlyHub © 2026 • AI Assisted • No Guarantees</p>
-</footer>
+    <!-- CPA Locker (Special Offers) -->
+    <section style="margin-top:18px">
+      <h3 class="card" style="padding:12px;margin-bottom:8px">عروض خاصة (MyLead)</h3>
+      <div class="card" style="padding:12px">
+        <div id="cpa-locker-ecc52a1e-fd33-11f0-be46-4e5c1971bddc" aria-label="Special offers locker">
+          <div id="cpa-locker-placeholder" style="padding:12px;background:#fffbe6;border-radius:8px;border:1px solid #ffedd5;color:#6b7280;">
+            عروض خاصة محمية — اضغط لتحميل القسائم والعروض.
+            <div style="margin-top:8px;direction:ltr">
+              <button id="loadCpaLockerBtn" class="btn" style="background:#f59e0b;color:#fff;padding:8px 12px;border-radius:8px;border:0;">تحميل العروض الآن</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<script>
-  // AFFILIATE LINKS
-  const affiliateLinks = {
-    temuBundle: "https://temu.to/k/ehsqckgdgv7",
-    amazonDeals: "https://s.click.aliexpress.com/e/_c3OAbIL1",
-  };
+    <section style="margin-top:22px">
+      <h3>مقالات حديثة</h3>
+      <div class="grid" style="margin-top:10px">
+        <div class="card"><h4><a href="/articles/ar/top-aliexpress-deals.html">أفضل صفقات AliExpress هذا الشهر</a></h4><p style="color:#6b7280">أفضل المنتجات ونصائح الشراء.</p></div>
+        <div class="card"><h4><a href="/articles/ar/how-to-evaluate-a-deal.html">كيف تُقيّم أي صفقة</a></h4><p style="color:#6b7280">قائمة فحص عملية لتجنب الشراء الخاطئ.</p></div>
+        <div class="card"><h4><a href="/articles/ar/compare-aliexpress-vs-temu.html">AliExpress أم Temu؟</a></h4><p style="color:#6b7280">مقارنة عملية لتحديد الأفضل حسب حاجتك.</p></div>
+      </div>
+    </section>
 
-  function openAffiliate(key) {
-    const url = affiliateLinks[key];
-    if (!url) return;
-    const encoded = btoa(url);
-    window.location.href = window.location.origin + window.location.pathname + "#go=" + encoded;
-  }
+    <section style="margin-top:22px">
+      <h3>ابدأ بالربح</h3>
+      <p style="color:#6b7280">نوفر دلائل وقوالب وروابط جاهزة لمساعدتك على تحقيق الدخل من الترافيك أو إطلاق قنوات تابعة.</p>
+      <a class="btn" href="/articles/ar/how-to-start-affiliate-earnings.html" style="margin-top:10px;display:inline-block">تعلم كيف</a>
+    </section>
 
-  (function handleHashRedirect() {
-    const hash = window.location.hash || "";
-    if (hash.startsWith("#go=")) {
-      try { window.location.replace(atob(hash.replace("#go=",""))); } catch(e){}
+  </main>
+
+  <footer class="container" style="margin-top:24px;padding:18px 0;color:#6b7280;border-top:1px solid #e6edf3">
+    <div style="display:flex;justify-content:space-between;flex-direction:row-reverse"><div>© FixlyHub 2026</div><div><a href="/privacy.html" style="color:#2563eb">الخصوصية</a> • <a href="/terms.html" style="color:#2563eb">الشروط</a></div></div>
+  </footer>
+
+  <!-- load affiliate config (centralized) -->
+  <script src="/config/affiliate.js"></script>
+
+  <script>
+    // Safe affiliate opener (wrapper)
+    function openAffiliate(key){
+      try{ const url = (window.getAffiliateLink) ? window.getAffiliateLink(key,{utm:{utm_source:'fixlyhub',utm_medium:'affiliate',utm_campaign:'homepage'},rotate:true}) : (window.affiliateLinks && window.affiliateLinks[key]);
+        if(!url) return alert('الرابط غير مهيأ: ' + key);
+        window.open(url,'_blank','noopener,noreferrer');
+      }catch(e){console.error(e)}
     }
-  })();
 
-  // AI Playbooks sample
-  const solutionsDB = [
-    { id:"temu-reward", tags:["temu","reward"], title:"How Temu Rewards Work", summary:"Learn Temu rewards." },
-    { id:"amazon-deal", tags:["amazon","deal"], title:"Evaluating Amazon Deals", summary:"Check deals." }
-  ];
+    // Cookie banner (simple consent)
+    function showCookieBanner(){
+      if(localStorage.getItem('fixly_cookies_accepted')) return;
+      const div=document.createElement('div'); div.className='cookie-banner';
+      div.innerHTML = '<div style="flex:1">نستخدم الكوكيز لتحسين تجربتك وعرض الإعلانات. بالاستمرار أنت توافق على سياسة الكوكيز الخاصة بنا. <a href="/cookie-policy.html" style="color:#fff;text-decoration:underline">المزيد</a></div><div style="display:flex;gap:8px"><button id="acceptCookies" class="btn">أوافق</button></div>';
+      document.body.appendChild(div);
+      document.getElementById('acceptCookies').addEventListener('click',()=>{ localStorage.setItem('fixly_cookies_accepted','1'); div.remove(); initThirdPartyScripts(); });
+    }
 
-  function runAI() {
-    const q = (document.getElementById("ai-query").value||"").toLowerCase().trim();
-    const res = document.getElementById("res-content");
-    if(!q){ alert("Enter a question"); return; }
-    const match = solutionsDB.find(i=>i.tags.some(t=>q.includes(t)));
-    if(match) alert(match.title + "\n" + match.summary);
-    else alert("No match yet");
-  }
+    // Ad script loader (effectivegatecpm) - loads after consent or user click
+    function initAdSlot(){
+      const scriptId = 'effectivegatecpm-ad-script';
+      if(document.getElementById(scriptId)) return;
+      const s = document.createElement('script'); s.type='text/javascript'; s.id=scriptId; s.src='https://pl28602600.effectivegatecpm.com/ea/11/8e/ea118ebfb63558281df1adbb61290596.js'; s.async=true;
+      s.onload = function(){ const ph = document.getElementById('ad-slot-effectivegatecpm'); if(ph) ph.style.minHeight='0px'; };
+      s.onerror = function(){ console.warn('Ad script blocked or failed to load'); };
+      document.getElementById('ad-slot-effectivegatecpm').appendChild(s);
+    }
 
-  // Discount Calculator
-  function runDiscountCalc() {
-    const p = parseFloat(document.getElementById("dc-price").value);
-    const d = parseFloat(document.getElementById("dc-discount").value);
-    const r = document.getElementById("dc-result");
-    if(!p||!d||p<0||d<0){ r.innerText="Enter valid numbers"; r.style.color="#f97373"; return; }
-    const finalPrice = p-(p*d)/100;
-    r.innerText = "Final price: $" + finalPrice.toFixed(2); r.style.color="#10b981";
-  }
+    // CPA Locker loader - loads after consent or user click
+    function initCpaLocker(){
+      const lockerDivId = 'cpa-locker-ecc52a1e-fd33-11f0-be46-4e5c1971bddc';
+      const scriptId = 'cpljs-ecc52a1e-fd33-11f0-be46-4e5c1971bddc';
+      const scriptSrc = 'https://bestlocker.eu/iframeLoader/ecc52a1e-fd33-11f0-be46-4e5c1971bddc';
+      if(document.getElementById(scriptId)) return;
+      const btn = document.getElementById('loadCpaLockerBtn');
+      if(localStorage.getItem('fixly_cookies_accepted')){
+        attachLockerScript();
+      } else if(btn){
+        btn.addEventListener('click', function(){ attachLockerScript(); });
+      }
 
-  // Budget Guardrail
-  function runBudgetGuardrail() {
-    const income = parseFloat(document.getElementById("bg-income").value);
-    const r = document.getElementById("bg-result");
-    if(!income||income<=0){ r.innerText="Enter valid income"; return; }
-    r.innerText = "Keep monthly shopping around $" + (income*0.1).toFixed(2) + " or less";
-  }
+      function attachLockerScript(){
+        if(document.getElementById(scriptId)) return;
+        const s = document.createElement('script'); s.type='text/javascript'; s.id=scriptId; s.src=scriptSrc; s.async=true;
+        s.onload = function(){ const ph = document.getElementById('cpa-locker-placeholder'); if(ph) ph.style.display='none'; };
+        s.onerror = function(){ console.warn('CPA locker failed to load or was blocked.'); };
+        document.getElementById(lockerDivId).appendChild(s);
+      }
+    }
 
-  function showPage(id){ document.querySelectorAll(".page").forEach(p=>p.classList.remove("active")); document.getElementById(id).classList.add("active"); window.scrollTo({top:0, behavior:"smooth"}); }
-  function scrollToAI(){ showPage('home'); const el=document.getElementById('ai-section'); if(!el) return; window.scrollTo({top: el.offsetTop-60, behavior:"smooth"}); }
+    function initThirdPartyScripts(){
+      // call ad and locker inits
+      initAdSlot(); initCpaLocker();
+    }
 
-</script>
+    // run on DOM ready
+    if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function(){ showCookieBanner(); // if already accepted, init
+      if(localStorage.getItem('fixly_cookies_accepted')) initThirdPartyScripts();
+    }); else { showCookieBanner(); if(localStorage.getItem('fixly_cookies_accepted')) initThirdPartyScripts(); }
+  </script>
 
+  <noscript>
+    <div style="padding:12px;background:#fffbe6;border-radius:8px;border:1px solid #ffedd5;color:#6b7280;margin:16px">
+      لتجربة كاملة وربما عرض بعض العروض يتطلب الموقع تفعيل JavaScript.
+    </div>
+  </noscript>
 </body>
 </html>
