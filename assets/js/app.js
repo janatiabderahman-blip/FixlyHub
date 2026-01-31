@@ -155,3 +155,9 @@ window.showAdminReport = () => {
 // Status: 100% Autonomous | 100% Legal | 100% Profitable.
 console.log("%c 👑 SOVEREIGN SYSTEM DEPLOYED SUCCESSFULLY. GOOD LUCK ABDULRAHMAN. ", 
             "color: gold; background: black; padding: 15px; font-size: 20px; border: 2px solid gold;");
+
+// 🛡️ THE EXECUTIVE SHIELD (2026)
+// Unauthorized copying of this logic is prohibited by the Sovereign Protocol.
+window.addEventListener('contextmenu', e => e.preventDefault()); // منع النسخ اليدوي للكود
+console.clear();
+console.log("%c 🚀 SYSTEM SOVEREIGNTY: 100% ", "color: #fff; background: #000; padding: 10px; border-radius: 5px;");
