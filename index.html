@@ -43,7 +43,11 @@
       --radius: 14px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -73,7 +77,9 @@
       transition: 0.2s;
     }
 
-    nav a:hover { color: var(--accent); }
+    nav a:hover {
+      color: var(--accent);
+    }
 
     .hero {
       padding: 70px 6% 50px;
@@ -83,300 +89,41 @@
     }
 
     .hero h1 {
-      font-size: 2.7rem;
-      font-weight: 700;
-      margin-bottom: 15px;
+      font-size: 2.5rem;
+      margin-bottom: 12px;
     }
 
     .hero p {
+      color: var(--subtext);
       font-size: 1.1rem;
-      color: var(--subtext);
-      margin-bottom: 25px;
-    }
-
-    .btn-primary {
-      display: inline-block;
-      padding: 12px 24px;
-      background: var(--accent);
-      color: #fff;
-      border-radius: var(--radius);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-
-    .section {
-      padding: 40px 6%;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .section h2 { margin-bottom: 15px; }
-    .section p { color: var(--subtext); }
-
-    .ad-container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #fafafa;
-      border: 1px solid #eee;
-      border-radius: 14px;
-      text-align: center;
-    }
-
-    footer {
-      padding: 30px 6%;
-      text-align: center;
-      color: var(--subtext);
-      border-top: 1px solid #eee;
-      margin-top: 40px;
-      font-size: 0.9rem;
-    }
-
-    .small-link {
-      color: var(--subtext);
-      text-decoration: none;
-    }
-
-    .small-link:hover { color: var(--accent); }
-
-    /* Mobile Improvements */
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 2rem; }
-      .hero p { font-size: 1rem; }
-      .ad-container { padding: 10px; }
-    }
-
-    /* Floating CTA */
-    .floating-cta {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #007aff;
-      color: #fff;
-      padding: 14px 22px;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      z-index: 999;
     }
   </style>
-
-  <!-- Main Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "FixlyHub",
-    "url": "https://janatiabderahman-blip.github.io/FixlyHub/",
-    "description": "FixlyHub curates global deals, coupons, and affiliate offers from Temu, AliExpress, and more.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "FixlyHub",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://copilot.microsoft.com/th/id/BCO.c88cb1dd-45f1-448d-861b-86dec3dba8b0.png"
-      }
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://janatiabderahman-blip.github.io/FixlyHub/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
-
-  <!-- FAQ Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How does FixlyHub choose offers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We filter thousands of deals daily and select only verified, high-value offers."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are the links safe?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes — all links are official affiliate links from Temu, AliExpress, and trusted CPA networks."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do offers change daily?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, new offers are added every day based on performance and global trends."
-        }
-      }
-    ]
-  }
-  </script>
-
 </head>
 
 <body>
 
-<header>
-  <div class="logo" style="display:flex;align-items:center;">
-    <a href="index.html" style="display:flex;align-items:center;text-decoration:none;" rel="noopener noreferrer">
-      <img src="https://copilot.microsoft.com/th/id/BCO.c88cb1dd-45f1-448d-861b-86dec3dba8b0.png"
-           alt="FixlyHub Logo"
-           loading="lazy"
-           style="height:55px; margin-right:12px;">
-      <span style="font-size:1.7rem;font-weight:700;color:#111;">FixlyHub</span>
-    </a>
-  </div>
+  <header>
+    <strong>FixlyHub</strong>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Deals</a>
+      <a href="#">Coupons</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-  <nav>
-    <a href="launch.html">Launch</a>
-    <a href="landing-video.html">Video</a>
-    <a href="index.html">Home</a>
-    <a href="offers.html">Offers</a>
-    <a href="posts.html">Posts</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-    <a href="amazon.html">Amazon</a>
-  </nav>
-</header>
+  <main>
+    <section class="hero">
+      <h1>Global Deals & Smart Savings</h1>
+      <p>Discover the best daily deals, coupons, and exclusive offers from top global marketplaces.</p>
+    </section>
+  </main>
 
-<section class="hero">
-  <h1>Premium Global Deals. Zero Noise.</h1>
-  <p>FixlyHub curates the smartest deals from Temu, AliExpress, and top marketplaces — clean, fast, and built for global savings.</p>
-  <a href="offers.html" class="btn-primary">Explore All Offers</a>
-</section>
+  <!-- Scripts (Correct & Safe Placement) -->
 
-<section class="section">
-  <h2>Why FixlyHub?</h2>
-  <p>We filter the chaos and bring you only high-value, verified deals with real savings — no spam, no fake discounts.</p>
-</section>
+  <script src="https://pl28749138.effectivegatecpm.com/01/cd/0a/01cd0a7f44b6458d292d4a3a85949c6d.js" async></script>
 
-<!-- 🔥 Top Trending Offers -->
-<section class="section">
-  <h2>🔥 Top Trending Offers</h2>
-  <p style="color:#555;margin-bottom:25px;">Most clicked and highest‑converting offers today.</p>
-
-  <div class="offer-card" style="border:1px solid #eee;padding:20px;border-radius:14px;margin-bottom:20px;">
-    <h3>Temu — General Deals</h3>
-    <a href="https://temu.to/k/ehsqckgdgv7" class="btn-primary" target="_blank">Open Temu Deals</a>
-  </div>
-
-  <div class="offer-card" style="border:1px solid #eee;padding:20px;border-radius:14px;margin-bottom:20px;">
-    <h3>Temu — 1000 DH Coupons</h3>
-    <a href="https://temu.to/k/epxkfkmslwr" class="btn-primary" target="_blank">Claim 1000 DH Coupons</a>
-  </div>
-
-  <div class="offer-card" style="border:1px solid #eee;padding:20px;border-radius:14px;margin-bottom:20px;">
-    <h3>AliExpress Deal 1</h3>
-    <a href="https://s.click.aliexpress.com/e/_c3OAbIL1" class="btn-primary" target="_blank">Open Deal</a>
-  </div>
-</section>
-
-<!-- ⚡ Daily Hot Deal -->
-<section class="section" style="background:#f9fbff;border-radius:14px;padding:40px 6%;margin-top:40px;">
-  <h2>⚡ Daily Hot Deal</h2>
-  <p style="color:#555;">Updated every 24 hours — highest converting offer today.</p>
-
-  <div class="offer-card" style="border:1px solid #007aff;padding:20px;border-radius:14px;margin-top:20px;">
-    <h3>🔥 Temu — Hot Offers</h3>
-    <p>Exclusive hot offers with extra savings.</p>
-    <a href="https://temu.to/k/e28np241co3" class="btn-primary" target="_blank">View Hot Offers</a>
-  </div>
-</section>
-
-<!-- ❓ FAQ -->
-<section class="section">
-  <h2>❓ Frequently Asked Questions</h2>
-
-  <div class="offer-card" style="border:1px solid #eee;padding:20px;border-radius:14px;margin-bottom:20px;">
-    <h3>How does FixlyHub choose offers?</h3>
-    <p>We filter thousands of deals daily and select only verified, high‑value offers.</p>
-  </div>
-
-  <div class="offer-card" style="border:1px solid #eee;padding:20px;border-radius:14px;margin-bottom:20px;">
-    <h3>Are the links safe?</h3>
-    <p>Yes — all links are official affiliate links from Temu, AliExpress, and trusted CPA networks.</p>
-  </div>
-
-  <div class="offer-card" style="border:1px solid #eee;padding:20px;border-radius:14px;margin-bottom:20px;">
-    <h3>Do offers change daily?</h3>
-    <p>Yes, new offers are added every day based on performance and global trends.</p>
-  </div>
-</section>
-
-<!-- Ads Section -->
-<div class="ad-container">
-  <script src="https://pl28602600.effectivegatecpm.com/ea/11/8e/ea118ebfb63558281df1adbb61290596.js"></script>
-  <script id="cpljs-46479cb6-ff73-11f0-ba47-129a1c289511"
-          src="https://bestlocker.eu/iframeLoader/46479cb6-ff73-11f0-ba47-129a1c289511">
-  </script>
-</div>
-
-<footer>
-  © 2026 FixlyHub — All rights reserved ·
-  <a href="terms-privacy.html" class="small-link">Terms & Privacy</a>
-</footer>
-
-<!-- Service Worker -->
-<script>
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js");
-  }
-</script>
-
-<!-- Notifications -->
-<script>
-  if ("Notification" in window) {
-    Notification.requestPermission().then(function(permission) {
-      console.log("Notifications:", permission);
-    });
-  }
-</script>
-
-<!-- Viral Referral System -->
-<script>
-function generateReferral() {
-  const userId = Math.random().toString(36).substring(2, 10);
-  const referralLink = window.location.origin + "/FixlyHub/?ref=" + userId;
-  localStorage.setItem("referral", referralLink);
-  return referralLink;
-}
-
-function showReferralPopup() {
-  const link = generateReferral();
-  alert("Share this link and earn rewards:\n" + link);
-}
-
-setTimeout(showReferralPopup, 4000);
-</script>
-
-<!-- Floating CTA -->
-<a href="offers.html" class="floating-cta">🔥 Best Offers Today</a>
+  <script src="https://pl28602600.effectivegatecpm.com/ea/11/8e/ea118ebfb63558281df1adbb61290596.js" async></script>
 
 </body>
-  <header style="display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: #ffffff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; font-family: 'Inter', sans-serif;">
-  <div class="logo">
-    <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
-      <span style="font-weight: 800; color: #111; font-size: 1.5rem; letter-spacing: -1px;">Fixly<span style="color: #007aff;">Hub</span></span>
-    </a>
-  </div>
-  <nav>
-    <ul style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0;">
-      <li><a href="index.html" style="text-decoration: none; color: #555; font-weight: 500; font-size: 0.9rem;">Home</a></li>
-      <li><a href="offers.html" style="text-decoration: none; color: #555; font-weight: 500; font-size: 0.9rem;">Deals</a></li>
-      <li><a href="amazon.html" style="text-decoration: none; color: #555; font-weight: 500; font-size: 0.9rem;">Amazon</a></li>
-      <li><a href="blog.html" style="text-decoration: none; color: #555; font-weight: 500; font-size: 0.9rem;">Blog</a></li>
-      <li><a href="contact.html" style="text-decoration: none; color: #555; font-weight: 500; font-size: 0.9rem;">Support</a></li>
-    </ul>
-  </nav>
-</header>
-
-  </html>
+</html>
